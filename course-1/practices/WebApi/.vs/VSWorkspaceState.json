@@ -3,12 +3,13 @@
     "",
     "\\WebApi",
     "\\WebApi\\Commands",
+    "\\WebApi\\Controllers",
     "\\WebApi\\Repositories",
     "\\WebApi\\Repositories\\Implementations",
     "\\WebApi\\Repositories\\Interfaces",
     "\\WebApi\\Repositories\\Models",
     "\\WebApi\\Settings"
   ],
-  "SelectedNode": "\\WebApi\\Repositories\\Models\\OpenApiResponse.cs",
+  "SelectedNode": "\\WebApi\\Controllers\\UpdateController.cs",
   "PreviewInSolutionExplorer": false
 }

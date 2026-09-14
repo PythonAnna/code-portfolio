@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Anna\\code-portfolio\\course-2\\practices\\Practice1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5CE6A1AC-5999-4D6F-B54A-C8650617C085}|Practice1\\Practice1.csproj|c:\\users\\anna\\code-portfolio\\course-2\\practices\\practice1\\practice1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CE6A1AC-5999-4D6F-B54A-C8650617C085}|Practice1\\Practice1.csproj|solutionrelative:practice1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CE6A1AC-5999-4D6F-B54A-C8650617C085}|Practice1\\Practice1.csproj|c:\\users\\anna\\code-portfolio\\course-2\\practices\\practice1\\practice1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CE6A1AC-5999-4D6F-B54A-C8650617C085}|Practice1\\Practice1.csproj|solutionrelative:practice1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CE6A1AC-5999-4D6F-B54A-C8650617C085}|Practice1\\Practice1.csproj|c:\\users\\anna\\code-portfolio\\course-2\\practices\\practice1\\practice1\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CE6A1AC-5999-4D6F-B54A-C8650617C085}|Practice1\\Practice1.csproj|solutionrelative:practice1\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\practices\\Practice1\\Practice1\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Practice1\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\practices\\Practice1\\Practice1\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Practice1\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T17:45:11.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\practices\\Practice1\\Practice1\\Program.cs",
+              "RelativeDocumentMoniker": "Practice1\\Program.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\practices\\Practice1\\Practice1\\Program.cs",
+              "RelativeToolTip": "Practice1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T17:43:51.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\practices\\Practice1\\Practice1\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Practice1\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\practices\\Practice1\\Practice1\\WeatherForecast.cs",
+              "RelativeToolTip": "Practice1\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T17:45:12.814Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
