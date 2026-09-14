@@ -4,6 +4,6 @@
 
 ## 🗂️ Содержание
 
-- [📚 Домашние задания](./course-1/homeworks/)
-- [🛠️ Практики](./course-1/practices/)
-- [🌟 Проекты](./course-1/projects/)
+- [📚 Домашние задания](./course-2/homeworks/)
+- [🛠️ Практики](./course-2/practices/)
+- [🌟 Проекты](./course-2/projects/)

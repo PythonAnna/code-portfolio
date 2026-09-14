@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebApi",
+    "\\WebApi\\Commands",
+    "\\WebApi\\Repositories",
+    "\\WebApi\\Repositories\\Implementations",
+    "\\WebApi\\Repositories\\Interfaces",
+    "\\WebApi\\Repositories\\Models",
+    "\\WebApi\\Settings"
+  ],
+  "SelectedNode": "\\WebApi\\Repositories\\Models\\OpenApiResponse.cs",
+  "PreviewInSolutionExplorer": false
+}
