@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace TestingPlatform.Migrations
+namespace TestingPlatform.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
@@ -11,93 +11,43 @@ namespace TestingPlatform.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Groups_Courses_CourseId",
-                table: "Groups");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Groups_Directions_DirectionId",
-                table: "Groups");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Groups_Projects_ProjectId",
-                table: "Groups");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Students_Groups_GroupId",
-                table: "Students");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Students_User_UserId",
-                table: "Students");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Students_GroupId",
-                table: "Students");
-
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_User",
-                table: "User");
-
-            migrationBuilder.DropColumn(
-                name: "GroupId",
-                table: "Students");
-
-            migrationBuilder.RenameTable(
-                name: "User",
-                newName: "Users");
-
-            migrationBuilder.AlterColumn<string>(
-                name: "Role",
-                table: "Users",
-                type: "TEXT",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "INTEGER");
-
-            migrationBuilder.AlterColumn<DateTimeOffset>(
-                name: "CreatedAt",
-                table: "Users",
-                type: "TEXT",
-                nullable: false,
-                defaultValueSql: "CURRENT_TIMESTAMP",
-                oldClrType: typeof(DateTimeOffset),
-                oldType: "TEXT");
-
-            migrationBuilder.AddColumn<string>(
-                name: "PasswordHash",
-                table: "Users",
-                type: "TEXT",
-                nullable: false,
-                defaultValue: "");
-
-            migrationBuilder.AddPrimaryKey(
-                name: "PK_Users",
-                table: "Users",
-                column: "Id");
-
             migrationBuilder.CreateTable(
-                name: "group_students",
+                name: "Courses",
                 columns: table => new
                 {
-                    GroupsId = table.Column<int>(type: "INTEGER", nullable: false),
-                    StudentsId = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_group_students", x => new { x.GroupsId, x.StudentsId });
-                    table.ForeignKey(
-                        name: "FK_group_students_Groups_GroupsId",
-                        column: x => x.GroupsId,
-                        principalTable: "Groups",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_group_students_Students_StudentsId",
-                        column: x => x.StudentsId,
-                        principalTable: "Students",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                    table.PrimaryKey("PK_Courses", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Directions",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Directions", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Projects",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Projects", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -124,30 +74,55 @@ namespace TestingPlatform.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Attempts",
+                name: "Users",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    StartedAt = table.Column<DateTimeOffset>(type: "TEXT", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
-                    SubmittedAt = table.Column<DateTimeOffset>(type: "TEXT", nullable: true),
-                    Score = table.Column<int>(type: "INTEGER", nullable: true),
-                    TestId = table.Column<int>(type: "INTEGER", nullable: false),
-                    StudentId = table.Column<int>(type: "INTEGER", nullable: false)
+                    Login = table.Column<string>(type: "TEXT", nullable: false),
+                    PasswordHash = table.Column<string>(type: "TEXT", nullable: false),
+                    Email = table.Column<string>(type: "TEXT", nullable: false),
+                    FirstName = table.Column<string>(type: "TEXT", nullable: false),
+                    MiddleName = table.Column<string>(type: "TEXT", nullable: true),
+                    LastName = table.Column<string>(type: "TEXT", nullable: false),
+                    CreatedAt = table.Column<DateTimeOffset>(type: "TEXT", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
+                    Role = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Attempts", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Groups",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    DirectionId = table.Column<int>(type: "INTEGER", nullable: false),
+                    CourseId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ProjectId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Groups", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Attempts_Students_StudentId",
-                        column: x => x.StudentId,
-                        principalTable: "Students",
+                        name: "FK_Groups_Courses_CourseId",
+                        column: x => x.CourseId,
+                        principalTable: "Courses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Attempts_Tests_TestId",
-                        column: x => x.TestId,
-                        principalTable: "Tests",
+                        name: "FK_Groups_Directions_DirectionId",
+                        column: x => x.DirectionId,
+                        principalTable: "Directions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Groups_Projects_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Projects",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -226,6 +201,51 @@ namespace TestingPlatform.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "test_projects",
+                columns: table => new
+                {
+                    ProjectsId = table.Column<int>(type: "INTEGER", nullable: false),
+                    TestsId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_test_projects", x => new { x.ProjectsId, x.TestsId });
+                    table.ForeignKey(
+                        name: "FK_test_projects_Projects_ProjectsId",
+                        column: x => x.ProjectsId,
+                        principalTable: "Projects",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_test_projects_Tests_TestsId",
+                        column: x => x.TestsId,
+                        principalTable: "Tests",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Students",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Phone = table.Column<string>(type: "TEXT", maxLength: 30, nullable: false),
+                    VkProfileLink = table.Column<string>(type: "TEXT", nullable: false),
+                    UserId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Students", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Students_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "test_groups",
                 columns: table => new
                 {
@@ -250,25 +270,75 @@ namespace TestingPlatform.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "test_projects",
+                name: "Answers",
                 columns: table => new
                 {
-                    ProjectsId = table.Column<int>(type: "INTEGER", nullable: false),
-                    TestsId = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Text = table.Column<string>(type: "TEXT", nullable: false),
+                    IsCorrect = table.Column<bool>(type: "INTEGER", nullable: false),
+                    QuestionId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_test_projects", x => new { x.ProjectsId, x.TestsId });
+                    table.PrimaryKey("PK_Answers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_test_projects_Projects_ProjectsId",
-                        column: x => x.ProjectsId,
-                        principalTable: "Projects",
+                        name: "FK_Answers_Questions_QuestionId",
+                        column: x => x.QuestionId,
+                        principalTable: "Questions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Attempts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    StartedAt = table.Column<DateTimeOffset>(type: "TEXT", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
+                    SubmittedAt = table.Column<DateTimeOffset>(type: "TEXT", nullable: true),
+                    Score = table.Column<int>(type: "INTEGER", nullable: true),
+                    TestId = table.Column<int>(type: "INTEGER", nullable: false),
+                    StudentId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Attempts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Attempts_Students_StudentId",
+                        column: x => x.StudentId,
+                        principalTable: "Students",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_test_projects_Tests_TestsId",
-                        column: x => x.TestsId,
+                        name: "FK_Attempts_Tests_TestId",
+                        column: x => x.TestId,
                         principalTable: "Tests",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "group_students",
+                columns: table => new
+                {
+                    GroupsId = table.Column<int>(type: "INTEGER", nullable: false),
+                    StudentsId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_group_students", x => new { x.GroupsId, x.StudentsId });
+                    table.ForeignKey(
+                        name: "FK_group_students_Groups_GroupsId",
+                        column: x => x.GroupsId,
+                        principalTable: "Groups",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_group_students_Students_StudentsId",
+                        column: x => x.StudentsId,
+                        principalTable: "Students",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -329,27 +399,6 @@ namespace TestingPlatform.Migrations
                         principalTable: "Tests",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Answers",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Text = table.Column<string>(type: "TEXT", nullable: false),
-                    IsCorrect = table.Column<bool>(type: "INTEGER", nullable: false),
-                    QuestionId = table.Column<int>(type: "INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Answers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Answers_Questions_QuestionId",
-                        column: x => x.QuestionId,
-                        principalTable: "Questions",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -427,42 +476,6 @@ namespace TestingPlatform.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Projects_Name",
-                table: "Projects",
-                column: "Name",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Groups_Name",
-                table: "Groups",
-                column: "Name",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Directions_Name",
-                table: "Directions",
-                column: "Name",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Courses_Name",
-                table: "Courses",
-                column: "Name",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Users_Email",
-                table: "Users",
-                column: "Email",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Users_Login",
-                table: "Users",
-                column: "Login",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Answers_QuestionId",
                 table: "Answers",
                 column: "QuestionId");
@@ -478,14 +491,59 @@ namespace TestingPlatform.Migrations
                 column: "TestId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Courses_Name",
+                table: "Courses",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Directions_Name",
+                table: "Directions",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_group_students_StudentsId",
                 table: "group_students",
                 column: "StudentsId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Groups_CourseId",
+                table: "Groups",
+                column: "CourseId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Groups_DirectionId",
+                table: "Groups",
+                column: "DirectionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Groups_Name",
+                table: "Groups",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Groups_ProjectId",
+                table: "Groups",
+                column: "ProjectId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Projects_Name",
+                table: "Projects",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Questions_TestId_Number",
                 table: "Questions",
                 columns: new[] { "TestId", "Number" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Students_UserId",
+                table: "Students",
+                column: "UserId",
                 unique: true);
 
             migrationBuilder.CreateIndex(
@@ -541,6 +599,18 @@ namespace TestingPlatform.Migrations
                 column: "QuestionId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Users_Email",
+                table: "Users",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Login",
+                table: "Users",
+                column: "Login",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UserSelectedOptions_AnswerId",
                 table: "UserSelectedOptions",
                 column: "AnswerId");
@@ -555,59 +625,11 @@ namespace TestingPlatform.Migrations
                 table: "UserTextAnswers",
                 column: "UserAttemptAnswerId",
                 unique: true);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Groups_Courses_CourseId",
-                table: "Groups",
-                column: "CourseId",
-                principalTable: "Courses",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Groups_Directions_DirectionId",
-                table: "Groups",
-                column: "DirectionId",
-                principalTable: "Directions",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Groups_Projects_ProjectId",
-                table: "Groups",
-                column: "ProjectId",
-                principalTable: "Projects",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Students_Users_UserId",
-                table: "Students",
-                column: "UserId",
-                principalTable: "Users",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Groups_Courses_CourseId",
-                table: "Groups");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Groups_Directions_DirectionId",
-                table: "Groups");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Groups_Projects_ProjectId",
-                table: "Groups");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Students_Users_UserId",
-                table: "Students");
-
             migrationBuilder.DropTable(
                 name: "group_students");
 
@@ -636,10 +658,22 @@ namespace TestingPlatform.Migrations
                 name: "UserTextAnswers");
 
             migrationBuilder.DropTable(
+                name: "Groups");
+
+            migrationBuilder.DropTable(
                 name: "Answers");
 
             migrationBuilder.DropTable(
                 name: "UserAttemptAnswers");
+
+            migrationBuilder.DropTable(
+                name: "Courses");
+
+            migrationBuilder.DropTable(
+                name: "Directions");
+
+            migrationBuilder.DropTable(
+                name: "Projects");
 
             migrationBuilder.DropTable(
                 name: "Attempts");
@@ -648,115 +682,13 @@ namespace TestingPlatform.Migrations
                 name: "Questions");
 
             migrationBuilder.DropTable(
+                name: "Students");
+
+            migrationBuilder.DropTable(
                 name: "Tests");
 
-            migrationBuilder.DropIndex(
-                name: "IX_Projects_Name",
-                table: "Projects");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Groups_Name",
-                table: "Groups");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Directions_Name",
-                table: "Directions");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Courses_Name",
-                table: "Courses");
-
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_Users",
-                table: "Users");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Users_Email",
-                table: "Users");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Users_Login",
-                table: "Users");
-
-            migrationBuilder.DropColumn(
-                name: "PasswordHash",
-                table: "Users");
-
-            migrationBuilder.RenameTable(
-                name: "Users",
-                newName: "User");
-
-            migrationBuilder.AddColumn<int>(
-                name: "GroupId",
-                table: "Students",
-                type: "INTEGER",
-                nullable: true);
-
-            migrationBuilder.AlterColumn<int>(
-                name: "Role",
-                table: "User",
-                type: "INTEGER",
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "TEXT");
-
-            migrationBuilder.AlterColumn<DateTimeOffset>(
-                name: "CreatedAt",
-                table: "User",
-                type: "TEXT",
-                nullable: false,
-                oldClrType: typeof(DateTimeOffset),
-                oldType: "TEXT",
-                oldDefaultValueSql: "CURRENT_TIMESTAMP");
-
-            migrationBuilder.AddPrimaryKey(
-                name: "PK_User",
-                table: "User",
-                column: "Id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Students_GroupId",
-                table: "Students",
-                column: "GroupId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Groups_Courses_CourseId",
-                table: "Groups",
-                column: "CourseId",
-                principalTable: "Courses",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Groups_Directions_DirectionId",
-                table: "Groups",
-                column: "DirectionId",
-                principalTable: "Directions",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Groups_Projects_ProjectId",
-                table: "Groups",
-                column: "ProjectId",
-                principalTable: "Projects",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Students_Groups_GroupId",
-                table: "Students",
-                column: "GroupId",
-                principalTable: "Groups",
-                principalColumn: "Id");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Students_User_UserId",
-                table: "Students",
-                column: "UserId",
-                principalTable: "User",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }
