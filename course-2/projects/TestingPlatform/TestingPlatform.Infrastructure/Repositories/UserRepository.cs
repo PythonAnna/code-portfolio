@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Infrastructure.Data;
-using TestingPlatform.Models;
+using TestingPlatform.Domain.Models;
 
 namespace TestingPlatform.Infrastructure.Repositories
 {

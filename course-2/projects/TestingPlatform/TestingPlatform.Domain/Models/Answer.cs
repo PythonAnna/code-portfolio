@@ -1,4 +1,4 @@
-﻿namespace TestingPlatform.Models
+﻿namespace TestingPlatform.Domain.Models
 {
     public class Answer
     {

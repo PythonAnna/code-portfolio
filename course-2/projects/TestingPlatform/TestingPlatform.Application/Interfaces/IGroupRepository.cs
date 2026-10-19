@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestingPlatform.Models;
+using TestingPlatform.Application.Dtos;
 
 namespace TestingPlatform.Application.Interfaces
 {
     public interface IGroupRepository
     {
-        int Create(Group group);
-        List<Group> GetAll();
-        Group GetById(int id);
-        void Update(Group group);
+        int Create(GroupDto group);
+        List<GroupDto> GetAll();
+        GroupDto GetById(int id);
+        void Update(GroupDto group);
         void Delete(int id);
     }
 }

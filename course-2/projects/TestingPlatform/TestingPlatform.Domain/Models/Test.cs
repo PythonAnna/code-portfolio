@@ -1,6 +1,6 @@
 ﻿using TestingPlatform.Enum;
 
-namespace TestingPlatform.Models
+namespace TestingPlatform.Domain.Models
 {
     public class Test
     {

@@ -1,55 +1,47 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using TestingPlatform.Application.Interfaces;
-//using TestingPlatform.Data;
-using TestingPlatform.Infrastructure.Repositories;
-using TestingPlatform.Models;
+using TestingPlatform.Application.Dtos;
 
-namespace TestingPlatform.Controllers
+
+namespace TestingPlatform.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GroupsController : ControllerBase
+    public class GroupsController(IGroupRepository groupRepository) : ControllerBase
     {
-        private readonly IGroupRepository _groupRepository;
-        public GroupsController(IGroupRepository groupRepository)
-        {
-            _groupRepository = groupRepository;
-        }
-
         [HttpGet]
-        public IActionResult GetAll()
+        public IActionResult GetAllGroups()
         {
-            var groups = _groupRepository.GetAll();
+            var groups = groupRepository.GetAll();
             return Ok(groups);
         }
 
         [HttpGet("{id:int}")]
         public IActionResult GetGroupById(int id)
         {
-            var group = _groupRepository.GetById(id);
+            var group = groupRepository.GetById(id);
             return Ok(group);
         }
 
         [HttpPost]
-        public IActionResult CreateGroup([FromBody] Group group)
+        public IActionResult CreateGroup([FromBody] GroupDto group)
         {
-            var id = _groupRepository.Create(group);
+            var id = groupRepository.Create(group);
             return StatusCode(StatusCodes.Status201Created, new { Id = id });
         }
 
-        [HttpPut("{id:int}")]
-        public IActionResult UpdateGroup([FromBody] Group group)
+        [HttpPut]
+        public IActionResult UpdateGroup([FromBody] GroupDto group)
         {
-            _groupRepository.Update(group);
+
+            groupRepository.Update(group);
             return NoContent();
         }
 
         [HttpDelete("{id:int}")]
         public IActionResult DeleteGroup(int id)
         {
-            _groupRepository.Delete(id);
+            groupRepository.Delete(id);
             return NoContent();
         }
     }

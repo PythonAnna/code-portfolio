@@ -1,38 +1,57 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.Json;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore.Storage.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using TestingPlatform.Application.Dtos;
 using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Infrastructure.Data;
-using TestingPlatform.Models;
+using TestingPlatform.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestingPlatform.Infrastructure.Repositories
 {
-    public class GroupRepository(AppDbContext _db) : IGroupRepository
+    public class GroupRepository(AppDbContext _db, IMapper mapper) : IGroupRepository
     {
-        public int Create(Group group)
+        public int Create(GroupDto groupDto)
         {
-            var direction = _db.Directions.Any(d => d.Id == group.DirectionId);
-            var course = _db.Courses.Any(c => c.Id == group.CourseId);
-            var project = _db.Projects.Any(p => p.Id == group.ProjectId);
-            if(!direction || !course || !project)
-            {
-                throw new Exception("Убедитесь, что DirectionId, CourseId и ProjectId существуют");
-            }
+            var group = mapper.Map<Domain.Models.Group>(groupDto);
 
-            if (group.Students.Any())
+            var direction = _db.Directions.FirstOrDefault(d => d.Id == group.DirectionId);
+            if (direction is null)
             {
-                var ids = group.Students.Select(s => s.Id).ToList();
-                var students = _db.Students.Where(s => ids.Contains(s.Id)).ToList();
-                if (students.Count != ids.Count)
-                {
-                    throw new Exception("Некоторые студенты не найдены");
-                }
-                group.Students = students;
+                throw new Exception("Направление не найдено");
             }
+            group.Direction = direction;
+
+            var course = _db.Courses.FirstOrDefault(c => c.Id == group.CourseId);
+            if(course is null)
+            {
+                throw new Exception("Курс не найден");
+            }
+            group.Course = course;
+
+            var project = _db.Projects.FirstOrDefault(p => p.Id == group.ProjectId);
+            if(project is null)
+            {
+                throw new Exception("Проект не найден");
+            }
+            group.Project = project;
+
+            //if (group.Students.Any())
+            //{
+            //    var ids = group.Students.Select(s => s.Id).ToList();
+            //    var students = _db.Students.Where(s => ids.Contains(s.Id)).ToList();
+            //    if (students.Count != ids.Count)
+            //    {
+            //        throw new Exception("Некоторые студенты не найдены");
+            //    }
+            //    group.Students = students;
+            //}
 
             var groupId = _db.Add(group);
             _db.SaveChanges();
@@ -40,23 +59,36 @@ namespace TestingPlatform.Infrastructure.Repositories
             return groupId.Entity.Id;
         }
 
-        public List<Group> GetAll()
+        public List<GroupDto> GetAll()
         {
-            var groups = _db.Groups.ToList();
-            return groups;
+            var groups = _db.Groups
+                .Include(g => g.Project)
+                .Include(g => g.Direction)
+                .Include(g => g.Course)
+                .Include(g => g.Students)
+                .AsNoTracking()
+                .ToList();
+
+            return mapper.Map<List<GroupDto>>(groups);
         }
 
-        public Group GetById(int id)
+        public GroupDto GetById(int id)
         {
-            var group = _db.Groups.FirstOrDefault(g => g.Id == id);
+            var group = _db.Groups
+                .Include(g => g.Project)
+                .Include(g => g.Course)
+                .Include(g => g.Direction)
+                .AsNoTracking()
+                .FirstOrDefault(g => g.Id == id);
+
             if(group is null)
             {
                 throw new Exception("Группа не найдена!");
             }
-            return group;
+            return mapper.Map<GroupDto>(group);
         }
 
-        public void Update(Group group)
+        public void Update(GroupDto group)
         {
             var exists = _db.Groups.FirstOrDefault(g => g.Id == group.Id);
 
@@ -65,31 +97,31 @@ namespace TestingPlatform.Infrastructure.Repositories
                 throw new Exception("Группа не найдена");
             }
 
-            var directionOk = _db.Directions.Any(d => d.Id == group.DirectionId);
-            var courseOk = _db.Courses.Any(c => c.Id == group.CourseId);
-            var projectOk = _db.Projects.Any(p => p.Id == group.ProjectId);
+            //var directionOk = _db.Directions.Any(d => d.Id == group.DirectionId);
+            //var courseOk = _db.Courses.Any(c => c.Id == group.CourseId);
+            //var projectOk = _db.Projects.Any(p => p.Id == group.ProjectId);
 
-            if(!directionOk || !courseOk || !projectOk)
-            {
-                throw new Exception("Убедитесь, что DirectionId, CourseId и ProjectId существуют");
-            }
+            //if(!directionOk || !courseOk || !projectOk)
+            //{
+            //    throw new Exception("Убедитесь, что DirectionId, CourseId и ProjectId существуют");
+            //}
 
-            if (group.Students.Any())
-            {
-                var ids = group.Students.Select(s => s.Id).ToList();
-                var students = _db.Students.Where(s => ids.Contains(s.Id)).ToList();
+            //if (group.Students.Any())
+            //{
+            //    var ids = group.Students.Select(s => s.Id).ToList();
+            //    var students = _db.Students.Where(s => ids.Contains(s.Id)).ToList();
 
-                if(students.Count != ids.Count)
-                {
-                    throw new Exception("Некоторые студенты не найдены!");
-                }
-                exists.Students = group.Students;
-            }
+            //    if(students.Count != ids.Count)
+            //    {
+            //        throw new Exception("Некоторые студенты не найдены!");
+            //    }
+            //    exists.Students = group.Students;
+            //}
 
             exists.Name = group.Name;
-            exists.DirectionId = group.DirectionId;
-            exists.CourseId = group.CourseId;
-            exists.ProjectId = group.ProjectId;
+            exists.DirectionId = group.Direction.Id;
+            exists.CourseId = group.Course.Id;
+            exists.ProjectId = group.Project.Id;
 
             _db.SaveChanges();
         }
@@ -102,7 +134,7 @@ namespace TestingPlatform.Infrastructure.Repositories
                 throw new Exception("Группа не найдена");
             }
 
-            _db.Remove(group);
+            _db.Groups.Remove(group);
             _db.SaveChanges();
         }
     }

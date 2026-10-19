@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TestingPlatform.Models
+namespace TestingPlatform.Domain.Models
 {
     public class Student
     {

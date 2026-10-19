@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TestingPlatform.Models;
+using TestingPlatform.Domain.Models;
 
 namespace TestingPlatform.Infrastructure.Data;
 

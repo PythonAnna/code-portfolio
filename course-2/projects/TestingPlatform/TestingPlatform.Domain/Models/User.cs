@@ -2,7 +2,7 @@
 using System.Text.Json.Serialization;
 using TestingPlatform.Enum;
 
-namespace TestingPlatform.Models
+namespace TestingPlatform.Domain.Models
 { 
     public class User
     {
