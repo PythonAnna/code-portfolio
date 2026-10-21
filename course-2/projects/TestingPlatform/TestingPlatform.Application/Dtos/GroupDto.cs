@@ -9,7 +9,5 @@ namespace TestingPlatform.Application.Dtos
         public DirectionDto Direction { get; set; }
         public CourseDto Course { get; set; }
         public ProjectDto Project { get; set; }
-        public List<Student> Students { get; set; }
-        public List<Test> Tests { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using TestingPlatform.Domain.Models;
 
 namespace TestingPlatform.Infrastructure.Mappings
 {
-    internal class DirectionProfile: Profile
+    public class DirectionProfile: Profile
     {
         public DirectionProfile()
         {

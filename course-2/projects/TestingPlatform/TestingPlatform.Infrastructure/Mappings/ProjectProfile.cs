@@ -4,7 +4,7 @@ using TestingPlatform.Domain.Models;
 
 namespace TestingPlatform.Infrastructure.Mappings
 {
-    internal class ProjectProfile: Profile
+    public class ProjectProfile: Profile
     {
         public ProjectProfile() 
         {

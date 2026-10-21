@@ -4,7 +4,7 @@ using TestingPlatform.Domain.Models;
 
 namespace TestingPlatform.Infrastructure.Mappings
 {
-    internal class GroupProfile: Profile
+    public class GroupProfile: Profile
     {
         public GroupProfile()
         {

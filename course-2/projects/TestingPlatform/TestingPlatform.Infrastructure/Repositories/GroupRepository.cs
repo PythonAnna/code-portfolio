@@ -17,26 +17,26 @@ namespace TestingPlatform.Infrastructure.Repositories
 {
     public class GroupRepository(AppDbContext _db, IMapper mapper) : IGroupRepository
     {
-        public int Create(GroupDto groupDto)
+        public async Task<int> CreateAsync(GroupDto groupDto)
         {
             var group = mapper.Map<Domain.Models.Group>(groupDto);
 
-            var direction = _db.Directions.FirstOrDefault(d => d.Id == group.DirectionId);
+            var direction = await _db.Directions.FirstOrDefaultAsync(d => d.Id == group.DirectionId);
             if (direction is null)
             {
                 throw new Exception("Направление не найдено");
             }
             group.Direction = direction;
 
-            var course = _db.Courses.FirstOrDefault(c => c.Id == group.CourseId);
-            if(course is null)
+            var course = await _db.Courses.FirstOrDefaultAsync(c => c.Id == group.CourseId);
+            if (course is null)
             {
                 throw new Exception("Курс не найден");
             }
             group.Course = course;
 
-            var project = _db.Projects.FirstOrDefault(p => p.Id == group.ProjectId);
-            if(project is null)
+            var project = await _db.Projects.FirstOrDefaultAsync(p => p.Id == group.ProjectId);
+            if (project is null)
             {
                 throw new Exception("Проект не найден");
             }
@@ -59,40 +59,40 @@ namespace TestingPlatform.Infrastructure.Repositories
             return groupId.Entity.Id;
         }
 
-        public List<GroupDto> GetAll()
+        public async Task<List<GroupDto>> GetAllAsync()
         {
-            var groups = _db.Groups
+            var groups = await _db.Groups
                 .Include(g => g.Project)
                 .Include(g => g.Direction)
                 .Include(g => g.Course)
                 .Include(g => g.Students)
                 .AsNoTracking()
-                .ToList();
+                .ToListAsync();
 
             return mapper.Map<List<GroupDto>>(groups);
         }
 
-        public GroupDto GetById(int id)
+        public async Task<GroupDto> GetByIdAsync(int id)
         {
-            var group = _db.Groups
+            var group = await _db.Groups
                 .Include(g => g.Project)
                 .Include(g => g.Course)
                 .Include(g => g.Direction)
                 .AsNoTracking()
-                .FirstOrDefault(g => g.Id == id);
+                .FirstOrDefaultAsync(g => g.Id == id);
 
-            if(group is null)
+            if (group is null)
             {
                 throw new Exception("Группа не найдена!");
             }
             return mapper.Map<GroupDto>(group);
         }
 
-        public void Update(GroupDto group)
+        public async Task UpdateAsync(GroupDto group)
         {
-            var exists = _db.Groups.FirstOrDefault(g => g.Id == group.Id);
+            var exists = await _db.Groups.FirstOrDefaultAsync(g => g.Id == group.Id);
 
-            if(exists is null)
+            if (exists is null)
             {
                 throw new Exception("Группа не найдена");
             }
@@ -123,19 +123,19 @@ namespace TestingPlatform.Infrastructure.Repositories
             exists.CourseId = group.Course.Id;
             exists.ProjectId = group.Project.Id;
 
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            var group = _db.Groups.FirstOrDefault(g => g.Id == id);
-            if(group is null)
+            var group = await _db.Groups.FirstOrDefaultAsync(g => g.Id == id);
+            if (group is null)
             {
                 throw new Exception("Группа не найдена");
             }
 
             _db.Groups.Remove(group);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
         }
     }
 }

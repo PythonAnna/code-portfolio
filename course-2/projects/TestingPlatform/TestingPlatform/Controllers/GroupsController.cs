@@ -10,38 +10,38 @@ namespace TestingPlatform.API.Controllers
     public class GroupsController(IGroupRepository groupRepository) : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetAllGroups()
+        public async Task<IActionResult> GetAllGroups()
         {
-            var groups = groupRepository.GetAll();
+            var groups = await groupRepository.GetAllAsync();
             return Ok(groups);
         }
 
         [HttpGet("{id:int}")]
-        public IActionResult GetGroupById(int id)
+        public async Task<IActionResult> GetGroupById(int id)
         {
-            var group = groupRepository.GetById(id);
+            var group = await groupRepository.GetByIdAsync(id);
             return Ok(group);
         }
 
         [HttpPost]
-        public IActionResult CreateGroup([FromBody] GroupDto group)
+        public async Task<IActionResult> CreateGroup([FromBody] GroupDto group)
         {
-            var id = groupRepository.Create(group);
+            var id = await groupRepository.CreateAsync(group);
             return StatusCode(StatusCodes.Status201Created, new { Id = id });
         }
 
         [HttpPut]
-        public IActionResult UpdateGroup([FromBody] GroupDto group)
+        public async Task<IActionResult> UpdateGroupAsync([FromBody] GroupDto group)
         {
 
-            groupRepository.Update(group);
+            await groupRepository.UpdateAsync(group);
             return NoContent();
         }
 
         [HttpDelete("{id:int}")]
-        public IActionResult DeleteGroup(int id)
+        public async Task<IActionResult> DeleteGroup(int id)
         {
-            groupRepository.Delete(id);
+            await groupRepository.DeleteAsync(id);
             return NoContent();
         }
     }
