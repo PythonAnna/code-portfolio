@@ -7,3 +7,4 @@
 - [📚 Домашние задания](./course-2/homeworks/)
 - [🛠️ Практики](./course-2/practices/)
 - [🌟 Проекты](./course-2/projects/)
+- [🔥 Вызов](./course-2/challenge/)

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37710.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Act2Keeper", "Act2Keeper\Act2Keeper.csproj", "{12ABC408-4C72-431A-86F2-9A72F6CBF704}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12ABC408-4C72-431A-86F2-9A72F6CBF704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12ABC408-4C72-431A-86F2-9A72F6CBF704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12ABC408-4C72-431A-86F2-9A72F6CBF704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12ABC408-4C72-431A-86F2-9A72F6CBF704}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7767EC0B-B187-4E47-A82A-5CA4FF6932FA}
+	EndGlobalSection
+EndGlobal

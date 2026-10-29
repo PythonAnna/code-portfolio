@@ -1,0 +1,6 @@
+@Act2Keeper_HostAddress = http://localhost:5118
+
+GET {{Act2Keeper_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
