@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TestingPlatform.API.Requests
+namespace TestingPlatform.API.Requests.Group
 {
     public class UpdateGroupRequest
     {
