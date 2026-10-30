@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12ABC408-4C72-431A-86F2-9A72F6CBF704}|Act2Keeper\\Act2Keeper.csproj|c:\\users\\anna\\code-portfolio\\course-2\\challenge\\act2keeper\\act2keeper\\controllers\\visitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12ABC408-4C72-431A-86F2-9A72F6CBF704}|Act2Keeper\\Act2Keeper.csproj|solutionrelative:act2keeper\\controllers\\visitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{12ABC408-4C72-431A-86F2-9A72F6CBF704}|Act2Keeper\\Act2Keeper.csproj|c:\\users\\anna\\code-portfolio\\course-2\\challenge\\act2keeper\\act2keeper\\models\\visitorationshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12ABC408-4C72-431A-86F2-9A72F6CBF704}|Act2Keeper\\Act2Keeper.csproj|solutionrelative:act2keeper\\models\\visitorationshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12ABC408-4C72-431A-86F2-9A72F6CBF704}|Act2Keeper\\Act2Keeper.csproj|c:\\users\\anna\\code-portfolio\\course-2\\challenge\\act2keeper\\act2keeper\\models\\visitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12ABC408-4C72-431A-86F2-9A72F6CBF704}|Act2Keeper\\Act2Keeper.csproj|solutionrelative:act2keeper\\models\\visitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12ABC408-4C72-431A-86F2-9A72F6CBF704}|Act2Keeper\\Act2Keeper.csproj|c:\\users\\anna\\code-portfolio\\course-2\\challenge\\act2keeper\\act2keeper\\controllers\\visitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12ABC408-4C72-431A-86F2-9A72F6CBF704}|Act2Keeper\\Act2Keeper.csproj|solutionrelative:act2keeper\\controllers\\visitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12ABC408-4C72-431A-86F2-9A72F6CBF704}|Act2Keeper\\Act2Keeper.csproj|c:\\users\\anna\\code-portfolio\\course-2\\challenge\\act2keeper\\act2keeper\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,26 +46,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Program.cs",
-              "RelativeDocumentMoniker": "Act2Keeper\\Program.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Program.cs",
-              "RelativeToolTip": "Act2Keeper\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T16:14:52.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "VisitorController.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Controllers\\VisitorController.cs",
               "RelativeDocumentMoniker": "Act2Keeper\\Controllers\\VisitorController.cs",
               "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Controllers\\VisitorController.cs",
               "RelativeToolTip": "Act2Keeper\\Controllers\\VisitorController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-29T15:36:40.834Z",
               "EditorCaption": ""
@@ -96,20 +83,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "VisitorAtionsHistory.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Models\\VisitorAtionsHistory.cs",
               "RelativeDocumentMoniker": "Act2Keeper\\Models\\VisitorAtionsHistory.cs",
               "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Models\\VisitorAtionsHistory.cs",
               "RelativeToolTip": "Act2Keeper\\Models\\VisitorAtionsHistory.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAoAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-29T16:06:24.628Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Visitor.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Models\\Visitor.cs",
               "RelativeDocumentMoniker": "Act2Keeper\\Models\\Visitor.cs",
@@ -119,6 +106,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-29T15:47:45.442Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Program.cs",
+              "RelativeDocumentMoniker": "Act2Keeper\\Program.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Program.cs",
+              "RelativeToolTip": "Act2Keeper\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T16:14:52.552Z"
             },
             {
               "$type": "Document",

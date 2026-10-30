@@ -1,0 +1,6 @@
+@Act3Treasury_HostAddress = http://localhost:5092
+
+GET {{Act3Treasury_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
