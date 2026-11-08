@@ -2,47 +2,74 @@
 using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Infrastructure.Data;
 using TestingPlatform.Domain.Models;
+using TestingPlatform.Application.Dtos;
+using AutoMapper;
+using System.Runtime.CompilerServices;
 
 namespace TestingPlatform.Infrastructure.Repositories
 {
-    public class UserRepository(AppDbContext _db): IUserRepository
+    public class UserRepository(AppDbContext _db, IMapper mapper) : IUserRepository
     {
-        public List<User> GetAllAsync()
+        public async Task<IEnumerable<UserDto>> GetAllAsync()
         {
-            var users = _db.Users.AsNoTracking().ToList();
-            return users;
+            var users = await _db.Users.AsNoTracking().ToListAsync();
+            return mapper.Map<IEnumerable<UserDto>>(users);
         }
 
-        public User GetByIdAsync(int id)
+        public async Task<UserDto> GetByIdAsync(int id)
         {
-            var user = _db.Users.AsNoTracking().FirstOrDefault(u => u.Id == id);
+            var user = await _db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
             if (user is null)
                 throw new Exception("Пользователь не найден");
 
-            return user;
+            return mapper.Map<UserDto>(user);
         }
 
-        public int CreateAsync(User user)
+        public async Task<int> CreateAsync(UserDto userDto)
         {
-            _db.Users.Add(user);
-            _db.SaveChanges();
+            var user = mapper.Map<User>(userDto);
+
+            user.FirstName = userDto.FirstName;
+            user.LastName = userDto.LastName;
+            user.MiddleName = userDto.MiddleName;
+            user.PasswordHash = userDto.Password;
+
+
+            await _db.Users.AddAsync(user);
+            await _db.SaveChangesAsync();
 
             return user.Id;
         }
 
-        public void UpdateAsync(User user)
+        public async Task UpdateAsync(UserDto userDto)
         {
-            _db.SaveChanges();
+            var user = await _db.Users.FirstOrDefaultAsync(user => user.Id == userDto.Id);
+
+            if(user == null)
+            {
+                throw new Exception("Пользователь не найден");
+            }
+
+            if (_db.Users.Any(u => u.Login == userDto.Login))
+                throw new Exception($"Пользователь с логином {userDto.Login} уже существует");
+
+
+            user.FirstName = userDto.FirstName;
+            user.LastName = userDto.LastName;
+            user.MiddleName = userDto.MiddleName;
+            user.Role = userDto.Role;
+
+            await _db.SaveChangesAsync();
         }
 
-        public void DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            var user = _db.Users.FirstOrDefault(u => u.Id == id);
+            var user = await _db.Users.FirstOrDefaultAsync(u => u.Id == id);
             if (user is null)
                 throw new Exception("Пользователь не найден");
 
             _db.Users.Remove(user);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
         }
     }
 }

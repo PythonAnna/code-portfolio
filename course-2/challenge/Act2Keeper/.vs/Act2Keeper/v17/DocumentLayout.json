@@ -38,24 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VisitorController.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Controllers\\VisitorController.cs",
-              "RelativeDocumentMoniker": "Act2Keeper\\Controllers\\VisitorController.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Controllers\\VisitorController.cs",
-              "RelativeToolTip": "Act2Keeper\\Controllers\\VisitorController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T15:36:40.834Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -96,6 +83,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VisitorController.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Controllers\\VisitorController.cs",
+              "RelativeDocumentMoniker": "Act2Keeper\\Controllers\\VisitorController.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Controllers\\VisitorController.cs",
+              "RelativeToolTip": "Act2Keeper\\Controllers\\VisitorController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T15:36:40.834Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Visitor.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\challenge\\Act2Keeper\\Act2Keeper\\Models\\Visitor.cs",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "Act2Keeper\\Models\\Visitor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T15:47:45.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T15:47:45.442Z"
             },
             {
               "$type": "Document",
