@@ -14,5 +14,12 @@ namespace TestingPlatform.Application.Interfaces
         Task<int> CreateTest(TestDto testDto);
         Task UpdateTest(TestDto testDto);
         Task DeleteTest(int id);
+        Task<List<TestDto>> GetAllForStudentAsync(int studentId);
+        Task<IEnumerable<TestDto>> GetTopRecentAsync(int count = 5);
+        Task<IEnumerable<object>> GetTestCountByAsync();
+        Task<IEnumerable<object>> GetCourseStatsAsync();
+        Task<IEnumerable<object>> GetDirectionAveragesAsync();
+        Task<IEnumerable<object>> GetTimelineByPublicAsync();
+        Task<IEnumerable<object>> GetTopGroupsByTestCountAsync(int top = 10);
     }
 }

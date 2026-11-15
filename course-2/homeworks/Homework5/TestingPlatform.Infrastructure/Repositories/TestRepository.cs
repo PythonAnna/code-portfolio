@@ -47,12 +47,36 @@ namespace TestingPlatform.Infrastructure.Repositories
         public async Task UpdateTest(TestDto testDto)
         {
             var test = await _db.Tests.FirstOrDefaultAsync(test => test.Id == testDto.Id);
+            if (test == null)
+            {
+                throw new Exception("Тест не найден");
+            }
 
+            test.Title = testDto.Title;
+            test.Description = testDto.Description;
+            test.IsRepeatable = testDto.IsRepeatable;
+            test.Type = testDto.Type;
+            test.PublishedAt = testDto.PublishedAt;
+            test.Deadline = testDto.Deadline;
+            test.DurationMinutes = testDto.DurationMinutes;
+            test.IsPublic = testDto.IsPublic;
+            test.PassingScore = testDto.PassingScore;
+            test.MaxAttempts = testDto.MaxAttempts;
+
+            await _db.SaveChangesAsync();
         }
 
         public async Task DeleteTest(int id)
         {
-            throw new NotImplementedException();
+            var test = await _db.Tests.FirstOrDefaultAsync(test => test.Id == id);
+
+            if (test == null)
+            {
+                throw new Exception("Тест не найден");
+            }
+
+            _db.Tests.Remove(test);
+            await _db.SaveChangesAsync();
         }
     }
 }
