@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TestingPlatform.Application.Interfaces;
-using TestingPlatform.Infrastructure.Data;
-using TestingPlatform.Domain.Models;
-using TestingPlatform.Application.Dtos;
-using AutoMapper;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
+using TestingPlatform.Infrastructure.Exceptions;
+using TestingPlatform.Application.Dtos;
+using TestingPlatform.Application.Interfaces;
+using TestingPlatform.Domain.Models;
+using TestingPlatform.Infrastructure.Data;
 
 namespace TestingPlatform.Infrastructure.Repositories
 {
@@ -20,7 +21,7 @@ namespace TestingPlatform.Infrastructure.Repositories
         {
             var user = await _db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
             if (user is null)
-                throw new Exception("Пользователь не найден");
+                throw new EntityNotFoundException("Пользователь не найден");
 
             return mapper.Map<UserDto>(user);
         }
@@ -47,11 +48,11 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             if(user == null)
             {
-                throw new Exception("Пользователь не найден");
+                throw new EntityNotFoundException("Пользователь не найден");
             }
 
             if (_db.Users.Any(u => u.Login == userDto.Login))
-                throw new Exception($"Пользователь с логином {userDto.Login} уже существует");
+                throw new ArgumentException($"Пользователь с логином {userDto.Login} уже существует");
 
 
             user.FirstName = userDto.FirstName;
@@ -66,7 +67,7 @@ namespace TestingPlatform.Infrastructure.Repositories
         {
             var user = await _db.Users.FirstOrDefaultAsync(u => u.Id == id);
             if (user is null)
-                throw new Exception("Пользователь не найден");
+                throw new EntityNotFoundException("Пользователь не найден");
 
             _db.Users.Remove(user);
             await _db.SaveChangesAsync();

@@ -1,14 +1,15 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestingPlatform.Infrastructure.Exceptions;
+using TestingPlatform.Application.Dtos;
+using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Domain.Models;
 using TestingPlatform.Infrastructure.Data;
-using TestingPlatform.Application.Interfaces;
-using TestingPlatform.Application.Dtos;
-using Microsoft.EntityFrameworkCore;
 
 
 namespace TestingPlatform.Infrastructure.Repositories
@@ -42,7 +43,7 @@ namespace TestingPlatform.Infrastructure.Repositories
                 .FirstOrDefaultAsync(student => student.Id == id);
             if(student == null)
             {
-                throw new Exception("Студен не найден");
+                throw new EntityNotFoundException("Студент не найден");
             }
             return mapper.Map<StudentDto>(student);
         }
@@ -52,7 +53,7 @@ namespace TestingPlatform.Infrastructure.Repositories
             var student = await _db.Students.FirstOrDefaultAsync(student => student.Id == studentDto.Id);
             if(student == null)
             {
-                throw new Exception("Студент не найден");
+                throw new EntityNotFoundException("Студент не найден");
             }
             student.Phone = studentDto.Phone;
             student.VkProfileLink = studentDto.VkProfileLink;
@@ -67,7 +68,7 @@ namespace TestingPlatform.Infrastructure.Repositories
                 .FirstOrDefault(s => s.Id == id);
             if(student == null)
             {
-                throw new Exception("Студен не найден");
+                throw new EntityNotFoundException("Студен не найден");
             }
             _db.Users.Remove(student.User);
             await _db.SaveChangesAsync();

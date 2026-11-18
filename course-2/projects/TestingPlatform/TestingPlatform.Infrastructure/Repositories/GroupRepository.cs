@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.Json;
 using System;
 using System.Collections.Generic;
@@ -7,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using TestingPlatform.Infrastructure.Exceptions;
 using TestingPlatform.Application.Dtos;
 using TestingPlatform.Application.Interfaces;
-using TestingPlatform.Infrastructure.Data;
 using TestingPlatform.Domain.Models;
-using Microsoft.EntityFrameworkCore;
+using TestingPlatform.Infrastructure.Data;
 
 namespace TestingPlatform.Infrastructure.Repositories
 {
@@ -24,21 +25,21 @@ namespace TestingPlatform.Infrastructure.Repositories
             var direction = await _db.Directions.FirstOrDefaultAsync(d => d.Id == group.DirectionId);
             if (direction is null)
             {
-                throw new Exception("Направление не найдено");
+                throw new EntityNotFoundException("Направление не найдено");
             }
             group.Direction = direction;
 
             var course = await _db.Courses.FirstOrDefaultAsync(c => c.Id == group.CourseId);
             if (course is null)
             {
-                throw new Exception("Курс не найден");
+                throw new EntityNotFoundException("Курс не найден");
             }
             group.Course = course;
 
             var project = await _db.Projects.FirstOrDefaultAsync(p => p.Id == group.ProjectId);
             if (project is null)
             {
-                throw new Exception("Проект не найден");
+                throw new EntityNotFoundException("Проект не найден");
             }
             group.Project = project;
 
@@ -83,7 +84,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             if (group is null)
             {
-                throw new Exception("Группа не найдена!");
+                throw new EntityNotFoundException("Группа не найдена!");
             }
             return mapper.Map<GroupDto>(group);
         }
@@ -94,7 +95,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             if (exists is null)
             {
-                throw new Exception("Группа не найдена");
+                throw new EntityNotFoundException("Группа не найдена");
             }
 
             //var directionOk = _db.Directions.Any(d => d.Id == group.DirectionId);
@@ -131,7 +132,7 @@ namespace TestingPlatform.Infrastructure.Repositories
             var group = await _db.Groups.FirstOrDefaultAsync(g => g.Id == id);
             if (group is null)
             {
-                throw new Exception("Группа не найдена");
+                throw new EntityNotFoundException("Группа не найдена");
             }
 
             _db.Groups.Remove(group);

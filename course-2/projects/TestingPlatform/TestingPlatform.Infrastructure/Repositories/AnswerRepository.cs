@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestingPlatform.Infrastructure.Exceptions;
 using TestingPlatform.Application.Dtos;
 using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Domain.Models;
@@ -37,7 +38,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             if(answer == null)
             {
-                throw new Exception("Ответ не найден");
+                throw new EntityNotFoundException("Ответ не найден");
             }
 
             return mapper.Map<AnswerDto>(answer);
@@ -48,7 +49,7 @@ namespace TestingPlatform.Infrastructure.Repositories
             var answer = await _db.Answers.FirstOrDefaultAsync(answer => answer.Id == answerDto.Id);
             if(answer == null)
             {
-                throw new Exception("Ответ не найден");
+                throw new EntityNotFoundException("Ответ не найден");
             }
             answer.Text = answerDto.Text;
             answer.IsCorrect = answerDto.IsCorrect;
@@ -60,7 +61,7 @@ namespace TestingPlatform.Infrastructure.Repositories
             var answer = await _db.Answers.FirstOrDefaultAsync(answer => answer.Id == id);
             if(answer == null)
             {
-                throw new Exception("Ответ не найтед");
+                throw new EntityNotFoundException("Ответ не найтед");
             }
             _db.Answers.Remove(answer);
             await _db.SaveChangesAsync();

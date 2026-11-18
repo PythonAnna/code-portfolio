@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestingPlatform.Infrastructure.Exceptions;
 using TestingPlatform.Application.Dtos;
 using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Domain.Models;
@@ -63,7 +64,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             if (test == null)
             {
-                throw new Exception("Тест не найден");
+                throw new EntityNotFoundException("Тест не найден");
             }
 
             await RefreshPublicationStatuses();
@@ -76,7 +77,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             if (test == null)
             {
-                throw new Exception("Тест не найден");
+                throw new EntityNotFoundException("Тест не найден");
             }
 
             test.Title = testDto.Title;
@@ -101,7 +102,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             if (test == null)
             {
-                throw new Exception("Тест не найден");
+                throw new EntityNotFoundException("Тест не найден");
             }
 
             _db.Tests.Remove(test);

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TestingPlatform.API.Middlewares;
 using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Infrastructure.Data;
 using TestingPlatform.Infrastructure.Repositories;
@@ -35,8 +36,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthorization();
 
 app.MapControllers();
