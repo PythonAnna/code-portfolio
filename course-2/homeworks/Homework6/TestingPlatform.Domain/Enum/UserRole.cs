@@ -1,4 +1,4 @@
-﻿namespace TestingPlatform.Enum
+﻿namespace TestingPlatform.Domain.Enum
 {
     public enum UserRole
     {

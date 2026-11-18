@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestingPlatform.Domain.Models;
-using TestingPlatform.Enum;
+using TestingPlatform.Domain.Enum;
 
 namespace TestingPlatform.Application.Dtos
 {

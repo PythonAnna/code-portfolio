@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\mappings\\answerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\mappings\\answerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\mappings\\testprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\mappings\\testprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\controllers\\groupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\controllers\\groupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45B514BB-AF21-416A-ADBE-3CB946DF6352}|TestingPlatform.Application\\TestingPlatform.Application.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform.application\\dtos\\groupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45B514BB-AF21-416A-ADBE-3CB946DF6352}|TestingPlatform.Application\\TestingPlatform.Application.csproj|solutionrelative:testingplatform.application\\dtos\\groupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\requests\\group\\creategrouprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\requests\\group\\creategrouprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\mappings\\groupprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\mappings\\groupprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D05560E1-A53C-40E4-8678-032CF67CCC3C}|TestingPlatform.Domain\\TestingPlatform.Domain.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform.domain\\enum\\testtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,18 +79,6 @@
       "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\mappings\\studentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\mappings\\testprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\mappings\\testprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\mappings\\answerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\mappings\\answerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\mappings\\groupprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\mappings\\groupprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\requests\\test\\createtestrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\requests\\test\\createtestrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -77,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{45B514BB-AF21-416A-ADBE-3CB946DF6352}|TestingPlatform.Application\\TestingPlatform.Application.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform.application\\dtos\\testdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45B514BB-AF21-416A-ADBE-3CB946DF6352}|TestingPlatform.Application\\TestingPlatform.Application.csproj|solutionrelative:testingplatform.application\\dtos\\testdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\controllers\\groupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\controllers\\groupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\requests\\group\\updategrouprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\requests\\group\\updategrouprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform\\requests\\group\\creategrouprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61272269-7193-451A-975F-EBA14F04CD0A}|TestingPlatform\\TestingPlatform.API.csproj|solutionrelative:testingplatform\\requests\\group\\creategrouprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D05560E1-A53C-40E4-8678-032CF67CCC3C}|TestingPlatform.Domain\\TestingPlatform.Domain.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform.domain\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -207,10 +211,6 @@
       "RelativeMoniker": "D:0:0:{45B514BB-AF21-416A-ADBE-3CB946DF6352}|TestingPlatform.Application\\TestingPlatform.Application.csproj|solutionrelative:testingplatform.application\\dtos\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45B514BB-AF21-416A-ADBE-3CB946DF6352}|TestingPlatform.Application\\TestingPlatform.Application.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform.application\\dtos\\groupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45B514BB-AF21-416A-ADBE-3CB946DF6352}|TestingPlatform.Application\\TestingPlatform.Application.csproj|solutionrelative:testingplatform.application\\dtos\\groupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DB376E23-256D-463F-BB92-5034E6EC642B}|TestingPlatform.Infrastructure\\TestingPlatform.Infrastructure.csproj|c:\\users\\anna\\code-portfolio\\course-2\\homeworks\\homework5\\testingplatform.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB376E23-256D-463F-BB92-5034E6EC642B}|TestingPlatform.Infrastructure\\TestingPlatform.Infrastructure.csproj|solutionrelative:testingplatform.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -285,25 +285,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 279,
+          "DockedWidth": 210,
           "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Enum\\UserRole.cs",
-              "RelativeDocumentMoniker": "TestingPlatform.Domain\\Enum\\UserRole.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Enum\\UserRole.cs",
-              "RelativeToolTip": "TestingPlatform.Domain\\Enum\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T17:40:16.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "TestType.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Enum\\TestType.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Domain\\Enum\\TestType.cs",
@@ -311,25 +298,62 @@
               "RelativeToolTip": "TestingPlatform.Domain\\Enum\\TestType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T17:40:09.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-18T17:40:09.391Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "TestController.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Controllers\\TestController.cs",
               "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Controllers\\TestController.cs",
               "RelativeToolTip": "TestingPlatform\\Controllers\\TestController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-09T13:19:33.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "TestProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\TestProfile.cs",
+              "RelativeDocumentMoniker": "TestingPlatform\\Mappings\\TestProfile.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\TestProfile.cs",
+              "RelativeToolTip": "TestingPlatform\\Mappings\\TestProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T16:41:43.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateGroupRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Group\\CreateGroupRequest.cs",
+              "RelativeDocumentMoniker": "TestingPlatform\\Requests\\Group\\CreateGroupRequest.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Group\\CreateGroupRequest.cs",
+              "RelativeToolTip": "TestingPlatform\\Requests\\Group\\CreateGroupRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T18:25:51.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Enum\\UserRole.cs",
+              "RelativeDocumentMoniker": "TestingPlatform.Domain\\Enum\\UserRole.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Enum\\UserRole.cs",
+              "RelativeToolTip": "TestingPlatform.Domain\\Enum\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T17:40:16.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AnswerType.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Enum\\AnswerType.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Domain\\Enum\\AnswerType.cs",
@@ -337,12 +361,11 @@
               "RelativeToolTip": "TestingPlatform.Domain\\Enum\\AnswerType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T17:39:58.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-18T17:39:58.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "AnswerResponse.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Responses\\AnswerResponse.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Responses\\AnswerResponse.cs",
@@ -350,12 +373,11 @@
               "RelativeToolTip": "TestingPlatform\\Responses\\AnswerResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T14:52:15.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-09T14:52:15.837Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "TestDto.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Dtos\\TestDto.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Application\\Dtos\\TestDto.cs",
@@ -367,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "StudentRepository.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Repositories\\StudentRepository.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Repositories\\StudentRepository.cs",
@@ -379,19 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TestProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\TestProfile.cs",
-              "RelativeDocumentMoniker": "TestingPlatform\\Mappings\\TestProfile.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\TestProfile.cs",
-              "RelativeToolTip": "TestingPlatform\\Mappings\\TestProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T16:41:43.763Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Answer.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Models\\Answer.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Domain\\Models\\Answer.cs",
@@ -403,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "UserProfile.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Mappings\\UserProfile.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Mappings\\UserProfile.cs",
@@ -415,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "ITestRepository.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Interfaces\\ITestRepository.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Application\\Interfaces\\ITestRepository.cs",
@@ -427,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Test.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Models\\Test.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Domain\\Models\\Test.cs",
@@ -440,8 +450,8 @@
           ]
         },
         {
-          "DockedWidth": 121,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 190,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -450,6 +460,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "GroupsController.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Controllers\\GroupsController.cs",
+              "RelativeDocumentMoniker": "TestingPlatform\\Controllers\\GroupsController.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Controllers\\GroupsController.cs",
+              "RelativeToolTip": "TestingPlatform\\Controllers\\GroupsController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAwDEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-12T18:06:41.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AnswerProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\AnswerProfile.cs",
+              "RelativeDocumentMoniker": "TestingPlatform\\Mappings\\AnswerProfile.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\AnswerProfile.cs",
+              "RelativeToolTip": "TestingPlatform\\Mappings\\AnswerProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T16:42:00.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GroupProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\GroupProfile.cs",
+              "RelativeDocumentMoniker": "TestingPlatform\\Mappings\\GroupProfile.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\GroupProfile.cs",
+              "RelativeToolTip": "TestingPlatform\\Mappings\\GroupProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T18:20:18.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GroupDto.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Dtos\\GroupDto.cs",
+              "RelativeDocumentMoniker": "TestingPlatform.Application\\Dtos\\GroupDto.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Dtos\\GroupDto.cs",
+              "RelativeToolTip": "TestingPlatform.Application\\Dtos\\GroupDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T17:51:50.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AnswersController.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Controllers\\AnswersController.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Controllers\\AnswersController.cs",
@@ -462,20 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AnswerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Repositories\\AnswerRepository.cs",
-              "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Repositories\\AnswerRepository.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Repositories\\AnswerRepository.cs",
-              "RelativeToolTip": "TestingPlatform.Infrastructure\\Repositories\\AnswerRepository.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwEIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T13:25:17.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "IAnswerRepository.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Interfaces\\IAnswerRepository.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Application\\Interfaces\\IAnswerRepository.cs",
@@ -483,12 +532,23 @@
               "RelativeToolTip": "TestingPlatform.Application\\Interfaces\\IAnswerRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T13:19:21.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-09T13:19:21.442Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
+              "Title": "AnswerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Repositories\\AnswerRepository.cs",
+              "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Repositories\\AnswerRepository.cs",
+              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Repositories\\AnswerRepository.cs",
+              "RelativeToolTip": "TestingPlatform.Infrastructure\\Repositories\\AnswerRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwEIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T13:25:17.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CreateAnswerRequest.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Answer\\CreateAnswerRequest.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Requests\\Answer\\CreateAnswerRequest.cs",
@@ -496,12 +556,11 @@
               "RelativeToolTip": "TestingPlatform\\Requests\\Answer\\CreateAnswerRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T14:57:54.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-09T14:57:54.14Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "UpdateAnswerRequest.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Answer\\UpdateAnswerRequest.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Requests\\Answer\\UpdateAnswerRequest.cs",
@@ -509,12 +568,11 @@
               "RelativeToolTip": "TestingPlatform\\Requests\\Answer\\UpdateAnswerRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T14:58:12.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-09T14:58:12.397Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "TestResponse.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Responses\\TestResponse.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Responses\\TestResponse.cs",
@@ -522,12 +580,11 @@
               "RelativeToolTip": "TestingPlatform\\Responses\\TestResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T14:52:32.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-09T14:52:32.946Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "StudentsController.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Controllers\\StudentsController.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Controllers\\StudentsController.cs",
@@ -535,12 +592,11 @@
               "RelativeToolTip": "TestingPlatform\\Controllers\\StudentsController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAgwEcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T14:44:15.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T14:44:15.449Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "StudentProfile.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\StudentProfile.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Mappings\\StudentProfile.cs",
@@ -548,36 +604,11 @@
               "RelativeToolTip": "TestingPlatform\\Mappings\\StudentProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T14:30:53.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T14:30:53.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AnswerProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\AnswerProfile.cs",
-              "RelativeDocumentMoniker": "TestingPlatform\\Mappings\\AnswerProfile.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\AnswerProfile.cs",
-              "RelativeToolTip": "TestingPlatform\\Mappings\\AnswerProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T16:42:00.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GroupProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\GroupProfile.cs",
-              "RelativeDocumentMoniker": "TestingPlatform\\Mappings\\GroupProfile.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Mappings\\GroupProfile.cs",
-              "RelativeToolTip": "TestingPlatform\\Mappings\\GroupProfile.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T18:20:18.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "CreateTestRequest.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Test\\CreateTestRequest.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Requests\\Test\\CreateTestRequest.cs",
@@ -589,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "UpdateTestRequest.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Test\\UpdateTestRequest.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Requests\\Test\\UpdateTestRequest.cs",
@@ -601,19 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GroupsController.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Controllers\\GroupsController.cs",
-              "RelativeDocumentMoniker": "TestingPlatform\\Controllers\\GroupsController.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Controllers\\GroupsController.cs",
-              "RelativeToolTip": "TestingPlatform\\Controllers\\GroupsController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowBkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-12T18:06:41.149Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Program.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Program.cs",
@@ -625,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "AnswerDto.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Dtos\\AnswerDto.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Application\\Dtos\\AnswerDto.cs",
@@ -637,7 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "TestRepository.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Repositories\\TestRepository.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Repositories\\TestRepository.cs",
@@ -649,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "UpdateGroupRequest.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Group\\UpdateGroupRequest.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Requests\\Group\\UpdateGroupRequest.cs",
@@ -661,19 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CreateGroupRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Group\\CreateGroupRequest.cs",
-              "RelativeDocumentMoniker": "TestingPlatform\\Requests\\Group\\CreateGroupRequest.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Group\\CreateGroupRequest.cs",
-              "RelativeToolTip": "TestingPlatform\\Requests\\Group\\CreateGroupRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T18:25:51.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "TestProfile.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Mappings\\TestProfile.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Mappings\\TestProfile.cs",
@@ -685,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "AnswerProfile.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Mappings\\AnswerProfile.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Mappings\\AnswerProfile.cs",
@@ -697,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "ProjectProfile.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Mappings\\ProjectProfile.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Mappings\\ProjectProfile.cs",
@@ -709,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "StudentProfile.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Mappings\\StudentProfile.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Mappings\\StudentProfile.cs",
@@ -721,7 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "CourseProfile.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Mappings\\CourseProfile.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Mappings\\CourseProfile.cs",
@@ -733,7 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Application\\Interfaces\\IUserRepository.cs",
@@ -745,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "CreateStudentRequest.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Student\\CreateStudentRequest.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Requests\\Student\\CreateStudentRequest.cs",
@@ -757,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "UpdateStudentRequest.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Requests\\Student\\UpdateStudentRequest.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Requests\\Student\\UpdateStudentRequest.cs",
@@ -769,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Models\\User.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Domain\\Models\\User.cs",
@@ -781,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "TestResult.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Models\\TestResult.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Domain\\Models\\TestResult.cs",
@@ -793,7 +800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "IGroupRepository.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Interfaces\\IGroupRepository.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Application\\Interfaces\\IGroupRepository.cs",
@@ -805,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Repositories\\UserRepository.cs",
@@ -817,7 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "IStudentRepository.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Interfaces\\IStudentRepository.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Application\\Interfaces\\IStudentRepository.cs",
@@ -829,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "StudentResponse.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Responses\\StudentResponse.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Responses\\StudentResponse.cs",
@@ -841,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "StudentDto.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Dtos\\StudentDto.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Application\\Dtos\\StudentDto.cs",
@@ -853,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "BaseResponse.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Responses\\BaseResponse.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Responses\\BaseResponse.cs",
@@ -865,7 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "GroupResponse.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform\\Responses\\Group\\GroupResponse.cs",
               "RelativeDocumentMoniker": "TestingPlatform\\Responses\\Group\\GroupResponse.cs",
@@ -877,7 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "DirectionProfile.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Mappings\\DirectionProfile.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Mappings\\DirectionProfile.cs",
@@ -889,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "GroupProfile.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Infrastructure\\Mappings\\GroupProfile.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Infrastructure\\Mappings\\GroupProfile.cs",
@@ -901,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Domain\\Models\\Student.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Domain\\Models\\Student.cs",
@@ -914,18 +921,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 51,
-              "Title": "GroupDto.cs",
-              "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Dtos\\GroupDto.cs",
-              "RelativeDocumentMoniker": "TestingPlatform.Application\\Dtos\\GroupDto.cs",
-              "ToolTip": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Dtos\\GroupDto.cs",
-              "RelativeToolTip": "TestingPlatform.Application\\Dtos\\GroupDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T17:51:50.665Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
               "Title": "CourseDto.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\code-portfolio\\course-2\\homeworks\\Homework5\\TestingPlatform.Application\\Dtos\\CourseDto.cs",
               "RelativeDocumentMoniker": "TestingPlatform.Application\\Dtos\\CourseDto.cs",

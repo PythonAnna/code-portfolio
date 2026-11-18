@@ -9,6 +9,7 @@ using TestingPlatform.Application.Dtos;
 using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Domain.Models;
 using TestingPlatform.Infrastructure.Data;
+using TestingPlatform.Domain.Enum;
 
 namespace TestingPlatform.Infrastructure.Repositories
 {
