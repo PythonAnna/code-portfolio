@@ -1,45 +1,65 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using TestingPlatform.API.Requests.Test;
+using TestingPlatform.API.Responses;
+using TestingPlatform.Application.Dtos;
+using TestingPlatform.Application.Interfaces;
+using TestingPlatform.Infrastructure.Repositories;
+using TestingPlatform.Domain.Enum;
 
 namespace TestingPlatform.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TestController : ControllerBase
+    public class TestController(ITestRepository testRepository, IMapper mapper) : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetAllTests()
+        public async Task<IActionResult> GetAllTests()
         {
-            return Ok("Список тестов...");
+            var tests = await testRepository.GetAllTests();
+            return Ok(mapper.Map<IEnumerable<TestResponse>>(tests));
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetTestById([FromRoute] int id)
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetTestById(int id)
         {
-            if (id <= 0) return BadRequest("Некоректный id");
-            if (id == 1) return Ok("Тест 1");
-            return NotFound("Тест не найден");
+            var test = await testRepository.GetTestById(id);
+            return Ok(mapper.Map<TestResponse>(test));
         }
 
         [HttpPost]
-        public IActionResult CreateTest()
+        public async Task<IActionResult> CreateTest([FromBody] CreateTestRequest test)
         {
-            return Created("/api/tests/1", "Тест 1 создан!");
+            var testDto = new TestDto()
+            {
+                Title = test.Title,
+                Description = test.Description,
+                IsRepeatable = test.IsRepeatable,
+                Type = test.Type,
+                PublishedAt = test.PublishedAt,
+                Deadline = test.Deadline,
+                DurationMinutes = test.DurationMinutes,
+                IsPublic = test.IsPublic,
+                PassingScore = test.PassingScore,
+                MaxAttempts = test.MaxAttempts
+            };
+            var testId = await testRepository.CreateTest(testDto);
+            return StatusCode(StatusCodes.Status201Created, new {Id = testId});
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateTest([FromRoute] int id)
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> UpdateTest([FromBody] UpdateTestRequest test)
         {
-            if (id <= 0) return BadRequest("Некоректный id");
-            if (id != 1) return NotFound("Тест не найден");
+            await testRepository.UpdateTest(mapper.Map<TestDto>(test));
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult DeleteTest([FromRoute] int id)
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> DeleteTest([FromRoute] int id)
         {
-            if (id <= 0) return BadRequest("Некоректный id");
-            if (id != 1) return NotFound("Тест не найден");
+            await testRepository.DeleteTest(id);
             return NoContent();
         }
     }

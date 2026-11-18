@@ -63,6 +63,7 @@ namespace TestingPlatform.Infrastructure.Repositories
             test.PassingScore = testDto.PassingScore;
             test.MaxAttempts = testDto.MaxAttempts;
 
+
             await _db.SaveChangesAsync();
         }
 

@@ -17,27 +17,34 @@ namespace TestingPlatform.API.Controllers
         public async Task<IActionResult> GetAllGroups()
         {
             var groups = await groupRepository.GetAllAsync();
-            return Ok(mapper.Map<IEnumerable<GroupRepository>>(groups));
+            return Ok(mapper.Map<IEnumerable<GroupResponse>>(groups));
         }
 
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetGroupById(int id)
         {
             var group = await groupRepository.GetByIdAsync(id);
-            return Ok(mapper.Map<IEnumerable<GroupRepository>>(group));
+            return Ok(mapper.Map<GroupResponse>(group));
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateGroup([FromBody] GroupDto group)
+        public async Task<IActionResult> CreateGroup([FromBody] CreateGroupRequest group)
         {
-            var id = await groupRepository.CreateAsync(mapper.Map<GroupDto>(group));
-            return StatusCode(StatusCodes.Status201Created, new { Id = id });
+            var groupDto = new GroupDto()
+            {
+                Name = group.Name,
+                DirectionId = group.DirectionId,
+                ProjectId = group.ProjectId,
+                CourseId = group.CourseId
+            };
+
+            var groupId = await groupRepository.CreateAsync(groupDto);
+            return StatusCode(StatusCodes.Status201Created, new { Id = groupId });
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateGroupAsync([FromBody] GroupDto group)
+        public async Task<IActionResult> UpdateGroupAsync([FromBody] UpdateGroupRequest group)
         {
-
             await groupRepository.UpdateAsync(mapper.Map<GroupDto>(group));
             return NoContent();
         }

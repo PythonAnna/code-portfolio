@@ -22,10 +22,5 @@ namespace TestingPlatform.Application.Dtos
         public bool IsPublic { get; set; }
         public int? PassingScore { get; set; } //проходной балл
         public int? MaxAttempts { get; set; }
-        //public List<StudentDto> Students { get; set; }
-        //public List<ProjectDto> Projects { get; set; }
-        //public List<CourseDto> Courses { get; set; }
-        //public List<GroupDto> Groups { get; set; }
-        //public List<DirectionDto> Directions { get; set; }
     }
 }

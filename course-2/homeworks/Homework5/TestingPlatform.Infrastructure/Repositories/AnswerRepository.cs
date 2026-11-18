@@ -55,7 +55,7 @@ namespace TestingPlatform.Infrastructure.Repositories
             await _db.SaveChangesAsync();
         }
 
-        public async Task DaleteAnswer(int id)
+        public async Task DeleteAnswer(int id)
         {
             var answer = await _db.Answers.FirstOrDefaultAsync(answer => answer.Id == id);
             if(answer == null)

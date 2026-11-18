@@ -6,8 +6,8 @@ namespace TestingPlatform.Application.Dtos
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public DirectionDto Direction { get; set; }
-        public CourseDto Course { get; set; }
-        public ProjectDto Project { get; set; }
+        public int DirectionId { get; set; }
+        public int ProjectId { get; set; }
+        public int CourseId { get; set; }
     }
 }
