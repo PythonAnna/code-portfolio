@@ -109,7 +109,7 @@ namespace TestingPlatform.Infrastructure.Repositories
             await _db.SaveChangesAsync();
         }
 
-        public async Task<List<TestDto>> GetAllForStudentAsync(int studentId)
+        public async Task<IEnumerable<TestDto>> GetAllForStudentAsync(int studentId)
         {
             var tests = await _db.Tests
                 .Where(t => t.IsPublic)
@@ -121,7 +121,7 @@ namespace TestingPlatform.Infrastructure.Repositories
                 .ToListAsync();
 
             await RefreshPublicationStatuses();
-            return mapper.Map<List<TestDto>>(tests);
+            return mapper.Map<IEnumerable<TestDto>>(tests);
         }
 
         public async Task<IEnumerable<TestDto>> GetTopRecentAsync(int count = 5)

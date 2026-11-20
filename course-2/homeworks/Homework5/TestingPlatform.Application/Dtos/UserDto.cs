@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using TestingPlatform.Domain.Models;
-using TestingPlatform.Enum;
+using TestingPlatform.Domain.Enum;
 
 namespace TestingPlatform.Application.Dtos
 {

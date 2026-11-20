@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System.Text.Json.Serialization;
-using TestingPlatform.Enum;
+using TestingPlatform.Domain.Enum;
 
 namespace TestingPlatform.Domain.Models
 { 
@@ -13,7 +13,7 @@ namespace TestingPlatform.Domain.Models
         public string FirstName { get; set; }
         public string? MiddleName { get; set; }
         public string LastName { get; set; }
-        public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public UserRole Role { get; set; }
 
         [JsonIgnore]

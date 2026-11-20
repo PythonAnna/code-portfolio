@@ -1,4 +1,4 @@
-﻿using TestingPlatform.Enum;
+﻿using TestingPlatform.Domain.Enum;
 
 namespace TestingPlatform.Domain.Models
 {
@@ -9,9 +9,9 @@ namespace TestingPlatform.Domain.Models
         public string Description { get; set; }
         public bool IsRepeatable { get; set; } //Можно ли пройти повторно
         public TestType Type { get; set; }
-        public DateTimeOffset CreatedAt { get; set; }
-        public DateTimeOffset PublishedAt { get; set; }
-        public DateTimeOffset Deadline { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime PublishedAt { get; set; }
+        public DateTime Deadline { get; set; }
         public int? DurationMinutes { get; set; } //время прохождения
         public bool IsPublic { get; set; } 
         public int? PassingScore { get; set; } //проходной балл

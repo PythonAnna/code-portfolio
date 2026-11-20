@@ -16,9 +16,9 @@ namespace TestingPlatform.Controllers
     public class TestController(ITestRepository testRepository, IMapper mapper) : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> GetAllTests()
+        public async Task<IActionResult> GetAllTests([FromQuery] bool? IsPublic, [FromQuery] List<int> groupIds, [FromQuery] List<int> studentId)
         {
-            var tests = await testRepository.GetAllTests();
+            var tests = await testRepository.GetAllTests(IsPublic, groupIds, studentId);
             return Ok(mapper.Map<IEnumerable<TestResponse>>(tests));
         }
 
@@ -61,6 +61,55 @@ namespace TestingPlatform.Controllers
         {
             await testRepository.DeleteTest(id);
             return NoContent();
+        }
+
+        [HttpGet("student/{id:int}")]
+        public async Task<IActionResult> GetAllForStudentAsync([FromRoute] int id)
+        {
+            var forStudent = await testRepository.GetAllForStudentAsync(id);
+            return Ok(mapper.Map<IEnumerable<TestResponse>>(forStudent));
+        }
+
+        [HttpGet("top/{count:int}")]
+        public async Task<IActionResult> GetTopRecentAsync([FromRoute] int count)
+        {
+            var top = await testRepository.GetTopRecentAsync(count);
+            return Ok(mapper.Map<IEnumerable<TestResponse>>(top));
+        }
+
+        [HttpGet("stats/count")]
+        public async Task<IActionResult> GetTestCountByAsync()
+        {
+            var count = await testRepository.GetTestCountByAsync();
+            return Ok(mapper.Map<IEnumerable<TestResponse>>(count));
+        }
+
+        [HttpGet("stats/courses")]
+        public async Task<IActionResult> GetCourseStatsAsync()
+        {
+            var status = await testRepository.GetCourseStatsAsync();
+            return Ok(mapper.Map<IEnumerable<TestResponse>>(status));
+        }
+
+        [HttpGet("stats/directions")]
+        public async Task<IActionResult> GetDirectionAveragesAsync()
+        {
+            var directionAverages = await testRepository.GetDirectionAveragesAsync();
+            return Ok(mapper.Map<IEnumerable<TestResponse>>(directionAverages));
+        }
+
+        [HttpGet("stats/timeline")]
+        public async Task<IActionResult> GetTimelineByPublicAsync()
+        {
+            var timeline = await testRepository.GetTimelineByPublicAsync();
+            return Ok(mapper.Map<IEnumerable<TestResponse>>(timeline));
+        }
+
+        [HttpGet("stats/top-groups/{top:int}")]
+        public async Task<IActionResult> GetTopGroupsByTestCountAsync([FromRoute] int top)
+        {
+            var topGroups = await testRepository.GetTopGroupsByTestCountAsync(top);
+            return Ok(mapper.Map<IEnumerable<TestResponse>>(topGroups));
         }
     }
 }

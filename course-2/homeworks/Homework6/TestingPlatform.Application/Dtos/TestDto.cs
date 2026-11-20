@@ -13,14 +13,14 @@ namespace TestingPlatform.Application.Dtos
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public bool IsRepeatable { get; set; } //Можно ли пройти повторно
+        public bool IsRepeatable { get; set; }
         public TestType Type { get; set; }
-        public DateTimeOffset CreatedAt { get; set; }
-        public DateTimeOffset PublishedAt { get; set; }
-        public DateTimeOffset Deadline { get; set; }
-        public int? DurationMinutes { get; set; } //время прохождения
+        public DateTime CreatedAt { get; set; }
+        public DateTime PublishedAt { get; set; }
+        public DateTime Deadline { get; set; }
+        public int? DurationMinutes { get; set; }
         public bool IsPublic { get; set; }
-        public int? PassingScore { get; set; } //проходной балл
+        public int? PassingScore { get; set; }
         public int? MaxAttempts { get; set; }
         public List<StudentDto> Students { get; set; }
         public List<ProjectDto> Projects { get; set; }

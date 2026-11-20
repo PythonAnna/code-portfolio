@@ -1,4 +1,4 @@
-﻿using TestingPlatform.Enum;
+﻿using TestingPlatform.Domain.Enum;
 
 namespace TestingPlatform.Domain.Models
 {

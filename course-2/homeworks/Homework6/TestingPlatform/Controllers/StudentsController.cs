@@ -4,7 +4,7 @@ using AutoMapper;
 using TestingPlatform.API.Responses;
 using TestingPlatform.API.Requests.Student;
 using TestingPlatform.Application.Dtos;
-
+using TestingPlatform.Domain.Enum;
 
 namespace TestingPlatform.Controllers
 {
@@ -43,7 +43,7 @@ namespace TestingPlatform.Controllers
                 FirstName = student.FirstName,
                 LastName = student.LastName,
                 MiddleName = student.MiddleName,
-                Role = Enum.UserRole.Student
+                Role = UserRole.Student
             };
 
             var userId = await userRepository.CreateAsync(userDto);
