@@ -5,3 +5,4 @@
 - [Домашняя работа 3](./Homework3/TestingPlatform)
 - [Домашняя работа 4](./Homework4/TestingPlatform)
 - [Домашняя работа 5](./Homework5/TestingPlatform)
+- [Домашняя работа 6](./Homework6/TestingPlatform)
