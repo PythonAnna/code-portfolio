@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System.Text.Json.Serialization;
-using TestingPlatform.Enum;
+using TestingPlatform.Domain.Enum;
 
 namespace TestingPlatform.Domain.Models
 { 

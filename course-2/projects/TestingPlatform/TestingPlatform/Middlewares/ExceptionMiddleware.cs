@@ -1,4 +1,4 @@
-﻿using TestingPlatform.API.Exceptions;
+﻿using TestingPlatform.Infrastructure.Exceptions;
 
 namespace TestingPlatform.API.Middlewares
 {

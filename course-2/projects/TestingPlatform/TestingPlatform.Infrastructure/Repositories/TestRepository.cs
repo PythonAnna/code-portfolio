@@ -109,116 +109,116 @@ namespace TestingPlatform.Infrastructure.Repositories
             await _db.SaveChangesAsync();
         }
 
-        public async Task<List<TestDto>> GetAllForStudentAsync(int studentId)
-        {
-            var tests = await _db.Tests
-                .Where(t => t.IsPublic)
-                .Where(
-                    t => t.Students.Any(s => s.Id == studentId)
-                || t.Courses.Any(c => c.Groups.Any(g => g.Students.Any(s => s.Id == studentId)))
-                || t.Projects.Any(p => p.Groups.Any(g => g.Students.Any(s => s.Id == studentId)))
-                || t.Directions.Any(d => d.Groups.Any(g => g.Students.Any(s => s.Id == studentId))))
-                .ToListAsync();
+        //public async Task<List<TestDto>> GetAllForStudentAsync(int studentId)
+        //{
+        //    var tests = await _db.Tests
+        //        .Where(t => t.IsPublic)
+        //        .Where(
+        //            t => t.Students.Any(s => s.Id == studentId)
+        //        || t.Courses.Any(c => c.Groups.Any(g => g.Students.Any(s => s.Id == studentId)))
+        //        || t.Projects.Any(p => p.Groups.Any(g => g.Students.Any(s => s.Id == studentId)))
+        //        || t.Directions.Any(d => d.Groups.Any(g => g.Students.Any(s => s.Id == studentId))))
+        //        .ToListAsync();
 
-            await RefreshPublicationStatuses();
-            return mapper.Map<List<TestDto>>(tests);
-        }
+        //    await RefreshPublicationStatuses();
+        //    return mapper.Map<List<TestDto>>(tests);
+        //}
 
-        public async Task<IEnumerable<TestDto>> GetTopRecentAsync(int count = 5)
-        {
-            var tests = await _db.Tests.AsNoTracking()
-                .OrderByDescending(t => t.PublishedAt)
-                .ThenByDescending(t => t.Id)
-                .Take(count) 
-                .ToListAsync();
+        //public async Task<IEnumerable<TestDto>> GetTopRecentAsync(int count = 5)
+        //{
+        //    var tests = await _db.Tests.AsNoTracking()
+        //        .OrderByDescending(t => t.PublishedAt)
+        //        .ThenByDescending(t => t.Id)
+        //        .Take(count) 
+        //        .ToListAsync();
 
-            return mapper.Map<IEnumerable<TestDto>>(tests);
-        }
+        //    return mapper.Map<IEnumerable<TestDto>>(tests);
+        //}
 
-        public async Task<IEnumerable<object>> GetTestCountByAsync()
-        {
-            return await _db.Tests
-                .AsNoTracking()
-                .GroupBy(t => t.Type)
-                .Select(g => new
-                {
-                    Type = g.Key,
-                    Count = g.Count()
-                })
-                .ToListAsync();
-        }
+        //public async Task<IEnumerable<object>> GetTestCountByAsync()
+        //{
+        //    return await _db.Tests
+        //        .AsNoTracking()
+        //        .GroupBy(t => t.Type)
+        //        .Select(g => new
+        //        {
+        //            Type = g.Key,
+        //            Count = g.Count()
+        //        })
+        //        .ToListAsync();
+        //}
 
-        public async Task<IEnumerable<object>> GetCourseStatsAsync()
-        {
-            return await _db.Courses
-                .AsNoTracking()
-                .Select(c => new
-                {
-                    Course = c.Name,
-                    AvgDuration = c.Tests.Average(t => (double?)t.DurationMinutes) ?? 0,
-                    AvgPassingScore = c.Tests.Average(t => (double?)t.PassingScore) ?? 0
-                })
-                .ToListAsync();
-        }
+        //public async Task<IEnumerable<object>> GetCourseStatsAsync()
+        //{
+        //    return await _db.Courses
+        //        .AsNoTracking()
+        //        .Select(c => new
+        //        {
+        //            Course = c.Name,
+        //            AvgDuration = c.Tests.Average(t => (double?)t.DurationMinutes) ?? 0,
+        //            AvgPassingScore = c.Tests.Average(t => (double?)t.PassingScore) ?? 0
+        //        })
+        //        .ToListAsync();
+        //}
 
-        public async Task<IEnumerable<object>> GetDirectionAveragesAsync()
-        {
-            return await _db.Directions
-                .AsNoTracking()
-                .Select(d => new
-                {
-                    Direction = d.Name,
-                    AvgDuration = d.Tests.Average(t => (double?)t.DurationMinutes) ?? 0,
-                    AvgPassingScore = d.Tests.Average(t => (double?)t.PassingScore) ?? 0
-                })
-                .OrderByDescending(x => x.AvgPassingScore)
-                .ToListAsync();
-        }
+        //public async Task<IEnumerable<object>> GetDirectionAveragesAsync()
+        //{
+        //    return await _db.Directions
+        //        .AsNoTracking()
+        //        .Select(d => new
+        //        {
+        //            Direction = d.Name,
+        //            AvgDuration = d.Tests.Average(t => (double?)t.DurationMinutes) ?? 0,
+        //            AvgPassingScore = d.Tests.Average(t => (double?)t.PassingScore) ?? 0
+        //        })
+        //        .OrderByDescending(x => x.AvgPassingScore)
+        //        .ToListAsync();
+        //}
 
-        public async Task<IEnumerable<object>> GetTimelineByPublicAsync()
-        {
-            return await _db.Tests
-                .AsNoTracking()
-                .Where(t => t.PublishedAt != default)
-                .GroupBy(t => new
-                {
-                    t.IsPublic,
-                    Year = t.PublishedAt.Year,
-                    Month = t.PublishedAt.Month
-                })
-                .Select(g => new
-                {
-                    g.Key.IsPublic,
-                    g.Key.Year,
-                    g.Key.Month,
-                    Count = g.Count()
-                })
-                .OrderBy(x => x.Month)
-                .ThenByDescending(x => x.IsPublic)
-                .ToListAsync();
-        }
+        //public async Task<IEnumerable<object>> GetTimelineByPublicAsync()
+        //{
+        //    return await _db.Tests
+        //        .AsNoTracking()
+        //        .Where(t => t.PublishedAt != default)
+        //        .GroupBy(t => new
+        //        {
+        //            t.IsPublic,
+        //            Year = t.PublishedAt.Year,
+        //            Month = t.PublishedAt.Month
+        //        })
+        //        .Select(g => new
+        //        {
+        //            g.Key.IsPublic,
+        //            g.Key.Year,
+        //            g.Key.Month,
+        //            Count = g.Count()
+        //        })
+        //        .OrderBy(x => x.Month)
+        //        .ThenByDescending(x => x.IsPublic)
+        //        .ToListAsync();
+        //}
 
-        public async Task<IEnumerable<object>> GetTopGroupsByTestCountAsync(int top = 10)
-        {
-            return await _db.Tests
-                .AsNoTracking()
-                .SelectMany(t => t.Groups.Select(g => new
-                {
-                    Group = g.Name,
-                    TestId = t.Id
-                }))
-                .GroupBy(x => x.Group)
-                .Select(g => new
-                {
-                    Group = g.Key,
-                    TestCount = g.Select(x => x.TestId)
-                        .Distinct()
-                        .Count()
-                })
-                .OrderByDescending(x => x.TestCount)
-                .Take(top)
-                .ToListAsync();
-        }
+        //public async Task<IEnumerable<object>> GetTopGroupsByTestCountAsync(int top = 10)
+        //{
+        //    return await _db.Tests
+        //        .AsNoTracking()
+        //        .SelectMany(t => t.Groups.Select(g => new
+        //        {
+        //            Group = g.Name,
+        //            TestId = t.Id
+        //        }))
+        //        .GroupBy(x => x.Group)
+        //        .Select(g => new
+        //        {
+        //            Group = g.Key,
+        //            TestCount = g.Select(x => x.TestId)
+        //                .Distinct()
+        //                .Count()
+        //        })
+        //        .OrderByDescending(x => x.TestCount)
+        //        .Take(top)
+        //        .ToListAsync();
+        //}
 
         private async Task UpdateMemberTest(Test test, TestDto testDto)
         {

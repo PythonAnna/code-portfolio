@@ -1,46 +1,57 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using TestingPlatform.API.Requests.Answer;
+using TestingPlatform.API.Responses;
+using TestingPlatform.Application.Dtos;
+using TestingPlatform.Application.Interfaces;
+using TestingPlatform.Domain.Models;
 
 namespace TestingPlatform.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AnswersController : ControllerBase
+    public class AnswersController(IAnswerRepository answerRepository, IMapper mapper) : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetAllAnswers()
+        public async Task<IActionResult> GetAllAnswers()
         {
-            return Ok("Список вопросов...");
+            var answer = await answerRepository.GetAllAnswers();
+            return Ok(mapper.Map<IEnumerable<AnswerResponse>>(answer));
         }
 
-        [HttpGet ("{id}")]
-        public IActionResult GetAnswersById([FromRoute] int id) {
-            if (id <= 0) return BadRequest("Неверный id");
-            if (id == 1) return Ok("Ответ 1");
-            return NotFound("Ответ не найден");
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAnswersById([FromRoute] int id)
+        {
+            var answer = await answerRepository.GetAnswersById(id);
+            return Ok(mapper.Map<AnswerResponse>(answer));
         }
 
         [HttpPost]
-        public IActionResult CreateAnswer()
+        public async Task<IActionResult> CreateAnswer([FromBody] CreateAnswerRequest answer)
         {
-            return Created("/api/answers/1", "Создан ответ 1");
+            var answerDto = new AnswerDto()
+            {
+                Text = answer.Text,
+                IsCorrect = answer.IsCorrect
+            };
+            var answerId = await answerRepository.CreateAnswer(answerDto);
+            return StatusCode(StatusCodes.Status201Created, new { Id = answerId });
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult DaleteAnswer([FromRoute] int id)
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> PutAnswer([FromBody] UpdateAnswerRequest answer)
         {
-            if (id <= 0) return BadRequest("Неверный id");
-            if (id != 1) return NotFound("Ответ не найден");
+            await answerRepository.UpdateAnswer(mapper.Map<AnswerDto>(answer));
             return NoContent();
         }
 
-        [HttpPut("{id}")]
-        public IActionResult PutAnswer([FromRoute] int id)
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> DeleteAnswer([FromRoute] int id)
         {
-            if (id <= 0) return BadRequest("Неверный id");
-            if (id != 1) return NotFound("Ответ не найден");
+            await answerRepository.DeleteAnswer(id);
             return NoContent();
         }
-
     }
 }

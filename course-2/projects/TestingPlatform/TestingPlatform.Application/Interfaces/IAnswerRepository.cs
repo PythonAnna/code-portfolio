@@ -13,6 +13,6 @@ namespace TestingPlatform.Application.Interfaces
         Task<AnswerDto> GetAnswersById(int id);
         Task<int> CreateAnswer(AnswerDto answerDto);
         Task UpdateAnswer(AnswerDto answerDto);
-        Task DaleteAnswer(int id);
+        Task DeleteAnswer(int id);
     }
 }
