@@ -13,13 +13,15 @@ using TestingPlatform.Application.Dtos;
 using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Domain.Models;
 using TestingPlatform.Infrastructure.Data;
+using Microsoft.Extensions.Logging;
 
 namespace TestingPlatform.Infrastructure.Repositories
 {
-    public class GroupRepository(AppDbContext _db, IMapper mapper) : IGroupRepository
+    public class GroupRepository(AppDbContext _db, IMapper mapper, ILogger<GroupRepository> logger) : IGroupRepository
     {
         public async Task<int> CreateAsync(GroupDto groupDto)
         {
+            logger.LogInformation("Создание новой группы");
             var group = mapper.Map<Domain.Models.Group>(groupDto);
 
             var direction = await _db.Directions.FirstOrDefaultAsync(d => d.Id == group.DirectionId);
@@ -57,11 +59,13 @@ namespace TestingPlatform.Infrastructure.Repositories
             var groupId = _db.Add(group);
             _db.SaveChanges();
 
+            logger.LogInformation("Группа успешно создана с Id={GroupId}", groupDto.Id);
             return groupId.Entity.Id;
         }
 
         public async Task<List<GroupDto>> GetAllAsync()
         {
+            logger.LogInformation("Получен запрос на получение всех групп");
             var groups = await _db.Groups
                 .Include(g => g.Project)
                 .Include(g => g.Direction)
@@ -70,11 +74,13 @@ namespace TestingPlatform.Infrastructure.Repositories
                 .AsNoTracking()
                 .ToListAsync();
 
+            logger.LogInformation($"Из БД получено {groups.Count} групп");
             return mapper.Map<List<GroupDto>>(groups);
         }
 
         public async Task<GroupDto> GetByIdAsync(int id)
         {
+            logger.LogInformation($"Получен запрос на получение группы Id = {id}");
             var group = await _db.Groups
                 .Include(g => g.Project)
                 .Include(g => g.Course)
@@ -86,11 +92,14 @@ namespace TestingPlatform.Infrastructure.Repositories
             {
                 throw new EntityNotFoundException("Группа не найдена!");
             }
+
+            logger.LogInformation($"Группа Id = {id} успешно найдена");
             return mapper.Map<GroupDto>(group);
         }
 
         public async Task UpdateAsync(GroupDto group)
         {
+            logger.LogInformation("Обновление группы Id={GroupId}", group.Id);
             var exists = await _db.Groups.FirstOrDefaultAsync(g => g.Id == group.Id);
 
             if (exists is null)
@@ -125,10 +134,12 @@ namespace TestingPlatform.Infrastructure.Repositories
             exists.ProjectId = group.Project.Id;
 
             await _db.SaveChangesAsync();
+            logger.LogInformation("Группа Id={GroupId} успешно обновлена", group.Id);
         }
 
         public async Task DeleteAsync(int id)
         {
+            logger.LogInformation("Удаление группы Id={GroupId}", id);
             var group = await _db.Groups.FirstOrDefaultAsync(g => g.Id == id);
             if (group is null)
             {
@@ -137,6 +148,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             _db.Groups.Remove(group);
             await _db.SaveChangesAsync();
+            logger.LogInformation("Группа Id={GroupId} успешно удалена", id);
         }
     }
 }

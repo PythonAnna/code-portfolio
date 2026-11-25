@@ -31,6 +31,8 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
         formatter: new JsonFormatter(),
         path: "logs/structured-.json")
+    .WriteTo.File(
+        path: "logs/app.log")
     .CreateLogger();
 
 builder.Host.UseSerilog();

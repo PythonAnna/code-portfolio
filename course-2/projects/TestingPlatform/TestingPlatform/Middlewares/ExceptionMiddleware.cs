@@ -3,45 +3,37 @@ using TestingPlatform.Infrastructure.Exceptions;
 
 namespace TestingPlatform.API.Middlewares
 {
-    public class ExceptionMiddleware
+    public class ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
     {
-        private RequestDelegate _next;
-        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
-        {
-            _next = next;
-        }
-
-        public async Task InvokeAsync(HttpContext context)
+        public async Task InvokeAsync(HttpContext httpContext)
         {
             try
             {
-                await _next(context);
+                await next(httpContext);
             }
-            catch(InvalidOperationException exc)
+            catch(Exception exception)
             {
-                //logger.LogError(exc, $"Exception: {exc.Message}");
-                await HandleExeptionAsync(context, StatusCodes.Status400BadRequest, exc.Message);
-            }
-            catch (ArgumentException exc)
-            {
-                await HandleExeptionAsync(context, StatusCodes.Status400BadRequest, exc.Message);
-            }
-            catch (EntityNotFoundException exc)
-            {
-                await HandleExeptionAsync(context, StatusCodes.Status404NotFound, exc.Message);
-            }
-            catch (Exception exc)
-            {
-                Console.WriteLine(exc.ToString());
-                await HandleExeptionAsync(context, StatusCodes.Status500InternalServerError, "Internal server error");
+                logger.LogError(exception, $"Exception: {exception.Message}");
+                var errorCodeResponse = exception switch
+                {
+                    InvalidOperationException exc =>
+                        new CodeAndMessage(StatusCodes.Status400BadRequest, exc.Message),
+                    ArgumentException exc =>
+                        new CodeAndMessage(StatusCodes.Status400BadRequest, exc.Message),
+                    EntityNotFoundException exc =>
+                        new CodeAndMessage(StatusCodes.Status404NotFound, exc.Message),
+                    _ => new CodeAndMessage(StatusCodes.Status500InternalServerError, "Internal server error")
+                };
+                await HandleExeptionAsync(httpContext, errorCodeResponse);
             }
         }
-
-        private async Task HandleExeptionAsync(HttpContext context, int ststusCode, string message)
+        private async Task HandleExeptionAsync(HttpContext context, CodeAndMessage errorCodeResponse)
         {
             context.Response.ContentType = "application/json";
-            context.Response.StatusCode = ststusCode;
-            await context.Response.WriteAsJsonAsync(new { message = message });
+            context.Response.StatusCode = errorCodeResponse.HttpStatusCode;
+            await context.Response.WriteAsJsonAsync(new { errorCodeResponse.Message });
         }
+
+        private record struct CodeAndMessage(int HttpStatusCode, string Message);
     }
 }

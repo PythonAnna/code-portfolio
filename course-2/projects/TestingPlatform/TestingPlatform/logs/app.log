@@ -42,3 +42,153 @@ ORDER BY "MigrationId";
 2026-11-23 21:07:05.104 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 168.1867ms
 2026-11-23 21:07:05.353 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
 2026-11-23 21:07:05.469 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 116.6442ms
+2026-11-25 20:38:21.594 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-25 20:38:21.670 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-25 20:38:21.694 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-11-25 20:38:21.726 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-11-25 20:38:22.328 +03:00 [INF] Now listening on: https://localhost:7071
+2026-11-25 20:38:22.338 +03:00 [INF] Now listening on: http://localhost:5098
+2026-11-25 20:38:22.532 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-25 20:38:22.598 +03:00 [INF] Hosting environment: Development
+2026-11-25 20:38:22.620 +03:00 [INF] Content root path: C:\Users\Anna\code-portfolio\course-2\projects\TestingPlatform\TestingPlatform
+2026-11-25 20:38:22.753 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-11-25 20:38:23.308 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 557.293ms
+2026-11-25 20:38:23.345 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-11-25 20:38:23.345 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-11-25 20:38:23.394 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 48.3166ms
+2026-11-25 20:38:23.514 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 169.0844ms
+2026-11-25 20:38:23.968 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-11-25 20:38:24.045 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 77.2133ms
+2026-11-25 20:39:16.598 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Answers - null null
+2026-11-25 20:39:16.624 +03:00 [INF] Executing endpoint 'TestingPlatform.Controllers.AnswersController.GetAllAnswers (TestingPlatform.API)'
+2026-11-25 20:39:16.710 +03:00 [INF] Route matched with {action = "GetAllAnswers", controller = "Answers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAnswers() on controller TestingPlatform.Controllers.AnswersController (TestingPlatform.API).
+2026-11-25 20:39:17.073 +03:00 [INF] Получен запрос на получение всех ответов
+2026-11-25 20:39:17.085 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-11-25 20:39:17.579 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."IsCorrect", "a"."QuestionId", "a"."Text"
+FROM "Answers" AS "a"
+2026-11-25 20:39:17.595 +03:00 [INF] Из БД получено 0 ответов
+2026-11-25 20:39:17.632 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TestingPlatform.API.Responses.AnswerResponse, TestingPlatform.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-25 20:39:17.665 +03:00 [INF] Executed action TestingPlatform.Controllers.AnswersController.GetAllAnswers (TestingPlatform.API) in 946.2775ms
+2026-11-25 20:39:17.670 +03:00 [INF] Executed endpoint 'TestingPlatform.Controllers.AnswersController.GetAllAnswers (TestingPlatform.API)'
+2026-11-25 20:39:17.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Answers - 200 null application/json; charset=utf-8 1082.616ms
+2026-11-25 20:41:03.911 +03:00 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-25 20:41:04.151 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-25 20:41:04.202 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-11-25 20:41:04.248 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-11-25 20:41:06.417 +03:00 [INF] Now listening on: https://localhost:7071
+2026-11-25 20:41:07.364 +03:00 [INF] Now listening on: http://localhost:5098
+2026-11-25 20:41:07.968 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-25 20:41:07.986 +03:00 [INF] Hosting environment: Development
+2026-11-25 20:41:08.004 +03:00 [INF] Content root path: C:\Users\Anna\code-portfolio\course-2\projects\TestingPlatform\TestingPlatform
+2026-11-25 20:41:08.345 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-11-25 20:41:09.329 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 1029.0348ms
+2026-11-25 20:41:10.234 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-11-25 20:41:10.234 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-11-25 20:41:10.297 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 62.9881ms
+2026-11-25 20:41:10.447 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 213.4161ms
+2026-11-25 20:41:10.590 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-11-25 20:41:10.858 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 268.3586ms
+2026-11-25 20:41:16.216 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Groups - null null
+2026-11-25 20:41:16.248 +03:00 [INF] Executing endpoint 'TestingPlatform.API.Controllers.GroupsController.GetAllGroups (TestingPlatform.API)'
+2026-11-25 20:41:16.308 +03:00 [INF] Route matched with {action = "GetAllGroups", controller = "Groups"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllGroups() on controller TestingPlatform.API.Controllers.GroupsController (TestingPlatform.API).
+2026-11-25 20:41:16.882 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-11-25 20:41:17.794 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "g"."Id", "g"."CourseId", "g"."DirectionId", "g"."Name", "g"."ProjectId", "p"."Id", "p"."Name", "d"."Id", "d"."Name", "c"."Id", "c"."Name", "t"."Id", "t"."Phone", "t"."UserId", "t"."VkProfileLink", "t"."GroupsId", "t"."StudentsId"
+FROM "Groups" AS "g"
+INNER JOIN "Projects" AS "p" ON "g"."ProjectId" = "p"."Id"
+INNER JOIN "Directions" AS "d" ON "g"."DirectionId" = "d"."Id"
+INNER JOIN "Courses" AS "c" ON "g"."CourseId" = "c"."Id"
+LEFT JOIN (
+    SELECT "s"."Id", "s"."Phone", "s"."UserId", "s"."VkProfileLink", "g0"."GroupsId", "g0"."StudentsId"
+    FROM "group_students" AS "g0"
+    INNER JOIN "Students" AS "s" ON "g0"."StudentsId" = "s"."Id"
+) AS "t" ON "g"."Id" = "t"."GroupsId"
+ORDER BY "g"."Id", "p"."Id", "d"."Id", "c"."Id", "t"."GroupsId", "t"."StudentsId"
+2026-11-25 20:41:17.853 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TestingPlatform.Infrastructure.Repositories.GroupRepository, TestingPlatform.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-25 20:41:17.869 +03:00 [INF] Executed action TestingPlatform.API.Controllers.GroupsController.GetAllGroups (TestingPlatform.API) in 1548.871ms
+2026-11-25 20:41:17.873 +03:00 [INF] Executed endpoint 'TestingPlatform.API.Controllers.GroupsController.GetAllGroups (TestingPlatform.API)'
+2026-11-25 20:41:17.890 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Groups - 200 null application/json; charset=utf-8 1673.9352ms
+2026-11-25 20:42:06.045 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Questions - null null
+2026-11-25 20:42:06.077 +03:00 [INF] Executing endpoint 'TestingPlatform.Controllers.QuestionsController.GetAllQuestions (TestingPlatform.API)'
+2026-11-25 20:42:06.088 +03:00 [INF] Route matched with {action = "GetAllQuestions", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllQuestions() on controller TestingPlatform.Controllers.QuestionsController (TestingPlatform.API).
+2026-11-25 20:42:06.098 +03:00 [INF] Получен запрос на получение всех вовпросов
+2026-11-25 20:42:06.286 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "q"."Id", "q"."AnswerType", "q"."Description", "q"."IsScoring", "q"."MaxScore", "q"."Number", "q"."TestId", "q"."Text"
+FROM "Questions" AS "q"
+2026-11-25 20:42:06.302 +03:00 [INF] Из БД получено 1 вопросов
+2026-11-25 20:42:06.329 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TestingPlatform.API.Responses.Question.QuestionResponse, TestingPlatform.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-25 20:42:06.350 +03:00 [INF] Executed action TestingPlatform.Controllers.QuestionsController.GetAllQuestions (TestingPlatform.API) in 257.1008ms
+2026-11-25 20:42:06.357 +03:00 [INF] Executed endpoint 'TestingPlatform.Controllers.QuestionsController.GetAllQuestions (TestingPlatform.API)'
+2026-11-25 20:42:06.359 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Questions - 200 null application/json; charset=utf-8 314.5961ms
+2026-11-25 20:43:35.969 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-25 20:43:36.165 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-25 20:43:36.229 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-11-25 20:43:36.680 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-11-25 20:43:38.084 +03:00 [INF] Now listening on: https://localhost:7071
+2026-11-25 20:43:38.088 +03:00 [INF] Now listening on: http://localhost:5098
+2026-11-25 20:43:38.352 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-25 20:43:38.365 +03:00 [INF] Hosting environment: Development
+2026-11-25 20:43:38.368 +03:00 [INF] Content root path: C:\Users\Anna\code-portfolio\course-2\projects\TestingPlatform\TestingPlatform
+2026-11-25 20:43:39.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-11-25 20:43:40.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 1096.3331ms
+2026-11-25 20:43:40.610 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-11-25 20:43:40.649 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-11-25 20:43:40.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 321.7504ms
+2026-11-25 20:43:41.107 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 457.2616ms
+2026-11-25 20:43:41.276 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-11-25 20:43:41.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 273.0162ms
+2026-11-25 20:44:04.147 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Answers - null null
+2026-11-25 20:44:04.184 +03:00 [INF] Executing endpoint 'TestingPlatform.Controllers.AnswersController.GetAllAnswers (TestingPlatform.API)'
+2026-11-25 20:44:04.253 +03:00 [INF] Route matched with {action = "GetAllAnswers", controller = "Answers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAnswers() on controller TestingPlatform.Controllers.AnswersController (TestingPlatform.API).
+2026-11-25 20:44:04.662 +03:00 [INF] Получен запрос на получение всех ответов
+2026-11-25 20:44:04.702 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-11-25 20:44:05.764 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."IsCorrect", "a"."QuestionId", "a"."Text"
+FROM "Answers" AS "a"
+2026-11-25 20:44:05.782 +03:00 [INF] Из БД получено 0 ответов
+2026-11-25 20:44:05.822 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TestingPlatform.API.Responses.AnswerResponse, TestingPlatform.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-25 20:44:05.837 +03:00 [INF] Executed action TestingPlatform.Controllers.AnswersController.GetAllAnswers (TestingPlatform.API) in 1570.5114ms
+2026-11-25 20:44:05.840 +03:00 [INF] Executed endpoint 'TestingPlatform.Controllers.AnswersController.GetAllAnswers (TestingPlatform.API)'
+2026-11-25 20:44:05.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Answers - 200 null application/json; charset=utf-8 1716.521ms
+2026-11-25 20:44:12.982 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Questions - null null
+2026-11-25 20:44:12.999 +03:00 [INF] Executing endpoint 'TestingPlatform.Controllers.QuestionsController.GetAllQuestions (TestingPlatform.API)'
+2026-11-25 20:44:13.062 +03:00 [INF] Route matched with {action = "GetAllQuestions", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllQuestions() on controller TestingPlatform.Controllers.QuestionsController (TestingPlatform.API).
+2026-11-25 20:44:13.072 +03:00 [INF] Получен запрос на получение всех вовпросов
+2026-11-25 20:44:13.237 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "q"."Id", "q"."AnswerType", "q"."Description", "q"."IsScoring", "q"."MaxScore", "q"."Number", "q"."TestId", "q"."Text"
+FROM "Questions" AS "q"
+2026-11-25 20:44:13.271 +03:00 [INF] Из БД получено 1 вопросов
+2026-11-25 20:44:13.297 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TestingPlatform.API.Responses.Question.QuestionResponse, TestingPlatform.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-25 20:44:13.316 +03:00 [INF] Executed action TestingPlatform.Controllers.QuestionsController.GetAllQuestions (TestingPlatform.API) in 247.5822ms
+2026-11-25 20:44:13.320 +03:00 [INF] Executed endpoint 'TestingPlatform.Controllers.QuestionsController.GetAllQuestions (TestingPlatform.API)'
+2026-11-25 20:44:13.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Questions - 200 null application/json; charset=utf-8 340.2376ms
+2026-11-25 20:44:20.140 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/api/Questions/1 - null null
+2026-11-25 20:44:20.166 +03:00 [INF] Executing endpoint 'TestingPlatform.Controllers.QuestionsController.GetQuestionById (TestingPlatform.API)'
+2026-11-25 20:44:20.194 +03:00 [INF] Route matched with {action = "GetQuestionById", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestionById(Int32) on controller TestingPlatform.Controllers.QuestionsController (TestingPlatform.API).
+2026-11-25 20:44:20.238 +03:00 [INF] Получен запрос на получение вопроса Id = 1
+2026-11-25 20:44:20.534 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "q"."Id", "q"."AnswerType", "q"."Description", "q"."IsScoring", "q"."MaxScore", "q"."Number", "q"."TestId", "q"."Text"
+FROM "Questions" AS "q"
+WHERE "q"."Id" = @__id_0
+LIMIT 1
+2026-11-25 20:44:20.547 +03:00 [INF] Вопрос Id = 1 успешно найден
+2026-11-25 20:44:20.622 +03:00 [INF] Executing OkObjectResult, writing value of type 'TestingPlatform.API.Responses.Question.QuestionResponse'.
+2026-11-25 20:44:20.663 +03:00 [INF] Executed action TestingPlatform.Controllers.QuestionsController.GetQuestionById (TestingPlatform.API) in 463.4505ms
+2026-11-25 20:44:20.671 +03:00 [INF] Executed endpoint 'TestingPlatform.Controllers.QuestionsController.GetQuestionById (TestingPlatform.API)'
+2026-11-25 20:44:20.673 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/api/Questions/1 - 200 null application/json; charset=utf-8 533.2639ms

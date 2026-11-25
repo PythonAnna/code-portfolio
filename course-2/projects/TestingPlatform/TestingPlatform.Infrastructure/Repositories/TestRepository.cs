@@ -10,22 +10,27 @@ using TestingPlatform.Application.Dtos;
 using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Domain.Models;
 using TestingPlatform.Infrastructure.Data;
+using Microsoft.Extensions.Logging;
 
 namespace TestingPlatform.Infrastructure.Repositories
 {
-    public class TestRepository(AppDbContext _db, IMapper mapper) : ITestRepository
+    public class TestRepository(AppDbContext _db, IMapper mapper, ILogger<TestRepository> logger) : ITestRepository
     {
         public async Task<int> CreateTest(TestDto testDto)
         {
+            logger.LogInformation("Создание нового теста");
             var test = mapper.Map<Test>(testDto);
             var testId = await _db.AddAsync(test);
             await UpdateMemberTest(test, testDto);
             await _db.SaveChangesAsync();
+
+            logger.LogInformation("Тест успешно создан с Id={TestId}", testId.Entity.Id);
             return testId.Entity.Id;
         }
 
         public async Task<IEnumerable<TestDto>> GetAllTests(bool? IsPublic, List<int> groupIds, List<int> studentId)
         {
+            logger.LogInformation("Получен запрос на получение всех тестов");
             var tests = _db.Tests
                 .OrderByDescending(t => t.PublishedAt)
                 .AsNoTracking()
@@ -47,11 +52,14 @@ namespace TestingPlatform.Infrastructure.Repositories
             }
 
             await RefreshPublicationStatuses();
+             
+            logger.LogInformation($"Все тесты получены");
             return mapper.Map<IEnumerable<TestDto>>(await tests.ToListAsync());
         }
 
         public async Task<TestDto> GetTestById(int id)
         {
+            logger.LogInformation($"Получен запрос на получение теста Id = {id}");
             var test = await _db.Tests
                 .Include(test => test.Directions)
                 .Include(test => test.Courses)
@@ -68,11 +76,14 @@ namespace TestingPlatform.Infrastructure.Repositories
             }
 
             await RefreshPublicationStatuses();
+
+            logger.LogInformation($"Тест Id = {id} успешно найден");
             return mapper.Map<TestDto>(test);
         }
 
         public async Task UpdateTest(TestDto testDto)
         {
+            logger.LogInformation("Обновление теста Id={TestId}", testDto.Id);
             var test = await _db.Tests.FirstOrDefaultAsync(test => test.Id == testDto.Id);
 
             if (test == null)
@@ -94,10 +105,12 @@ namespace TestingPlatform.Infrastructure.Repositories
             await UpdateMemberTest(test, testDto);
 
             await _db.SaveChangesAsync();
+            logger.LogInformation("Тест Id={TestId} успешно обновлен", testDto.Id);
         }
 
         public async Task DeleteTest(int id)
         {
+            logger.LogInformation("Удаление теста Id={TestId}", id);
             var test = await _db.Tests.FirstOrDefaultAsync(test => test.Id == id);
 
             if (test == null)
@@ -107,6 +120,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             _db.Tests.Remove(test);
             await _db.SaveChangesAsync();
+            logger.LogInformation("Тест Id={TestId} успешно удален", id);
         }
 
         //public async Task<List<TestDto>> GetAllForStudentAsync(int studentId)

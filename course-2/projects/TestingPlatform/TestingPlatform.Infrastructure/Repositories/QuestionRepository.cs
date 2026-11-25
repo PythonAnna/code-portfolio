@@ -18,11 +18,13 @@ namespace TestingPlatform.Infrastructure.Repositories
     {
         public async Task<int> CreateAsync(QuestionDto questionDto)
         {
+            logger.LogInformation("Создание нового вопроса для теста TestId={TestId}", questionDto.TestId);
             var question = mapper.Map<Question>(questionDto);
 
             var questionId = await _db.AddAsync(question);
             await _db.SaveChangesAsync();
 
+            logger.LogInformation("Вопрос успешно создан с Id={QuestionId}", questionId.Entity.Id);
             return questionId.Entity.Id;
         }
 
@@ -30,6 +32,7 @@ namespace TestingPlatform.Infrastructure.Repositories
         {
             logger.LogInformation("Получен запрос на получение всех вовпросов");
             var questions = await _db.Questions.AsNoTracking().ToListAsync();
+            
             logger.LogInformation($"Из БД получено {questions.Count} вопросов");
             return mapper.Map<IEnumerable<QuestionDto>>(questions);
         }
@@ -52,6 +55,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
         public async Task UpdateAsync(QuestionDto questionDto)
         {
+            logger.LogInformation("Обновление вопроса Id={QuestionId}", questionDto.Id);
             var question = await _db.Questions.FirstOrDefaultAsync(question => question.Id == questionDto.Id);
 
             if(question == null)
@@ -67,9 +71,11 @@ namespace TestingPlatform.Infrastructure.Repositories
             question.TestId = questionDto.TestId;
 
             await _db.SaveChangesAsync();
+            logger.LogInformation("Вопрос Id={QuestionId} успешно обновлен", questionDto.Id);
         }
         public async Task DeleteAsync(int id)
         {
+            logger.LogInformation("Удаление вопроса Id={QuestionId}", id);
             var question = await _db.Questions.FirstOrDefaultAsync(question => question.Id == id);
 
             if(question == null)
@@ -79,6 +85,8 @@ namespace TestingPlatform.Infrastructure.Repositories
 
             _db.Questions.Remove(question);
             await _db.SaveChangesAsync();
+
+            logger.LogInformation("Вопрос Id={QuestionId} успешно удален", id);
         }
 
     }
