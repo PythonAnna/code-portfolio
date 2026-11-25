@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using TestingPlatform.API.Requests.Student;
-using TestingPlatform.API.Responses;
+using TestingPlatform.API.Responses.Student;
 using TestingPlatform.Application.Dtos;
 
 namespace TestingPlatform.API.Mappings
@@ -9,6 +9,10 @@ namespace TestingPlatform.API.Mappings
     {
         public StudentProfile()
         {
+            CreateMap<StudentDto, StudentForTestResponse>()
+                .ForMember(d => d.FirstName, m => m.MapFrom(s => s.User.FirstName))
+                .ForMember(d => d.MiddleName, m => m.MapFrom(s => s.User.MiddleName))
+                .ForMember(d => d.LastName, m => m.MapFrom(s => s.User.LastName));
             CreateMap<StudentDto, StudentResponse>()
                 .ForMember(d => d.Login, m => m.MapFrom(s => s.User.Login))
                 .ForMember(d => d.Email, m => m.MapFrom(s => s.User.Email))

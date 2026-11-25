@@ -1,0 +1,583 @@
+{
+  "Timestamp": "2026-11-23T21:14:03.9961242+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}",
+  "Properties": {
+    "elapsed": "19",
+    "parameters": "",
+    "commandType": "Text",
+    "commandTimeout": 30,
+    "newLine": "\r\n",
+    "commandText": "SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';",
+    "EventId": {
+      "Id": 20101,
+      "Name": "Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"
+    },
+    "SourceContext": "Microsoft.EntityFrameworkCore.Database.Command"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:04.0459509+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}",
+  "Properties": {
+    "elapsed": "0",
+    "parameters": "",
+    "commandType": "Text",
+    "commandTimeout": 30,
+    "newLine": "\r\n",
+    "commandText": "SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';",
+    "EventId": {
+      "Id": 20101,
+      "Name": "Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"
+    },
+    "SourceContext": "Microsoft.EntityFrameworkCore.Database.Command"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:04.0661401+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}",
+  "Properties": {
+    "elapsed": "1",
+    "parameters": "",
+    "commandType": "Text",
+    "commandTimeout": 30,
+    "newLine": "\r\n",
+    "commandText": "SELECT \"MigrationId\", \"ProductVersion\"\r\nFROM \"__EFMigrationsHistory\"\r\nORDER BY \"MigrationId\";",
+    "EventId": {
+      "Id": 20101,
+      "Name": "Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"
+    },
+    "SourceContext": "Microsoft.EntityFrameworkCore.Database.Command"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:04.0977753+03:00",
+  "Level": "Information",
+  "MessageTemplate": "No migrations were applied. The database is already up to date.",
+  "Properties": {
+    "EventId": {
+      "Id": 20405,
+      "Name": "Microsoft.EntityFrameworkCore.Migrations.MigrationsNotApplied"
+    },
+    "SourceContext": "Microsoft.EntityFrameworkCore.Migrations"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:04.5716918+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Now listening on: {address}",
+  "Properties": {
+    "address": "https://localhost:7071",
+    "EventId": {
+      "Id": 14,
+      "Name": "ListeningOnAddress"
+    },
+    "SourceContext": "Microsoft.Hosting.Lifetime"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:04.5736445+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Now listening on: {address}",
+  "Properties": {
+    "address": "http://localhost:5098",
+    "EventId": {
+      "Id": 14,
+      "Name": "ListeningOnAddress"
+    },
+    "SourceContext": "Microsoft.Hosting.Lifetime"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:04.7367702+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Application started. Press Ctrl+C to shut down.",
+  "Properties": { "SourceContext": "Microsoft.Hosting.Lifetime" }
+} {
+  "Timestamp": "2026-11-23T21:14:04.7742343+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Hosting environment: {EnvName}",
+  "Properties": {
+    "EnvName": "Development",
+    "SourceContext": "Microsoft.Hosting.Lifetime"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:04.9038523+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request starting {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {ContentType} {ContentLength}",
+  "TraceId": "911dded1864a0de71b5f93cfeff45424",
+  "SpanId": "d950f4102c0bd450",
+  "Properties": {
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "ContentType": null,
+    "ContentLength": null,
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/swagger/index.html",
+    "QueryString": "",
+    "EventId": { "Id": 1 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HM7ED9SD:00000001",
+    "RequestPath": "/swagger/index.html",
+    "ConnectionId": "0HNQ9HM7ED9SD"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:04.9394576+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Content root path: {ContentRoot}",
+  "Properties": {
+    "ContentRoot": "C:\\Users\\Anna\\code-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform",
+    "SourceContext": "Microsoft.Hosting.Lifetime"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:05.6324930+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request finished {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {StatusCode} {ContentLength} {ContentType} {ElapsedMilliseconds}ms",
+  "TraceId": "911dded1864a0de71b5f93cfeff45424",
+  "SpanId": "d950f4102c0bd450",
+  "Properties": {
+    "ElapsedMilliseconds": 732.4273,
+    "StatusCode": 200,
+    "ContentType": "text/html;charset=utf-8",
+    "ContentLength": null,
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/swagger/index.html",
+    "QueryString": "",
+    "EventId": { "Id": 2 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HM7ED9SD:00000001",
+    "RequestPath": "/swagger/index.html",
+    "ConnectionId": "0HNQ9HM7ED9SD"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:05.7723026+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request starting {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {ContentType} {ContentLength}",
+  "TraceId": "124af23addaabe18101298b0dd94c145",
+  "SpanId": "fd85f1a8d27e6f57",
+  "Properties": {
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "ContentType": null,
+    "ContentLength": null,
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/_vs/browserLink",
+    "QueryString": "",
+    "EventId": { "Id": 1 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HM7ED9SD:00000005",
+    "RequestPath": "/_vs/browserLink",
+    "ConnectionId": "0HNQ9HM7ED9SD"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:05.7723043+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request starting {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {ContentType} {ContentLength}",
+  "TraceId": "9ab57a6dc4d6c6f99d43779d52485056",
+  "SpanId": "1a481cd581d86d9d",
+  "Properties": {
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "ContentType": null,
+    "ContentLength": null,
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/_framework/aspnetcore-browser-refresh.js",
+    "QueryString": "",
+    "EventId": { "Id": 1 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HM7ED9SD:00000003",
+    "RequestPath": "/_framework/aspnetcore-browser-refresh.js",
+    "ConnectionId": "0HNQ9HM7ED9SD"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:05.8903518+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request finished {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {StatusCode} {ContentLength} {ContentType} {ElapsedMilliseconds}ms",
+  "TraceId": "9ab57a6dc4d6c6f99d43779d52485056",
+  "SpanId": "1a481cd581d86d9d",
+  "Properties": {
+    "ElapsedMilliseconds": 117.7009,
+    "StatusCode": 200,
+    "ContentType": "application/javascript; charset=utf-8",
+    "ContentLength": 16523,
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/_framework/aspnetcore-browser-refresh.js",
+    "QueryString": "",
+    "EventId": { "Id": 2 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HM7ED9SD:00000003",
+    "RequestPath": "/_framework/aspnetcore-browser-refresh.js",
+    "ConnectionId": "0HNQ9HM7ED9SD"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:05.9753940+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request finished {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {StatusCode} {ContentLength} {ContentType} {ElapsedMilliseconds}ms",
+  "TraceId": "124af23addaabe18101298b0dd94c145",
+  "SpanId": "fd85f1a8d27e6f57",
+  "Properties": {
+    "ElapsedMilliseconds": 203.1364,
+    "StatusCode": 200,
+    "ContentType": "text/javascript; charset=UTF-8",
+    "ContentLength": null,
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/_vs/browserLink",
+    "QueryString": "",
+    "EventId": { "Id": 2 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HM7ED9SD:00000005",
+    "RequestPath": "/_vs/browserLink",
+    "ConnectionId": "0HNQ9HM7ED9SD"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:06.3455919+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request starting {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {ContentType} {ContentLength}",
+  "TraceId": "2d13d758a3e1a8c16092a34be748e878",
+  "SpanId": "2718e539fd58dc55",
+  "Properties": {
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "ContentType": null,
+    "ContentLength": null,
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/swagger/v1/swagger.json",
+    "QueryString": "",
+    "EventId": { "Id": 1 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HM7ED9SD:00000007",
+    "RequestPath": "/swagger/v1/swagger.json",
+    "ConnectionId": "0HNQ9HM7ED9SD"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:06.4226065+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request finished {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {StatusCode} {ContentLength} {ContentType} {ElapsedMilliseconds}ms",
+  "TraceId": "2d13d758a3e1a8c16092a34be748e878",
+  "SpanId": "2718e539fd58dc55",
+  "Properties": {
+    "ElapsedMilliseconds": 76.7439,
+    "StatusCode": 200,
+    "ContentType": "application/json;charset=utf-8",
+    "ContentLength": null,
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/swagger/v1/swagger.json",
+    "QueryString": "",
+    "EventId": { "Id": 2 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HM7ED9SD:00000007",
+    "RequestPath": "/swagger/v1/swagger.json",
+    "ConnectionId": "0HNQ9HM7ED9SD"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:26.7907508+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}",
+  "Properties": {
+    "elapsed": "34",
+    "parameters": "",
+    "commandType": "Text",
+    "commandTimeout": 30,
+    "newLine": "\r\n",
+    "commandText": "SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';",
+    "EventId": {
+      "Id": 20101,
+      "Name": "Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"
+    },
+    "SourceContext": "Microsoft.EntityFrameworkCore.Database.Command"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:26.8792052+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}",
+  "Properties": {
+    "elapsed": "0",
+    "parameters": "",
+    "commandType": "Text",
+    "commandTimeout": 30,
+    "newLine": "\r\n",
+    "commandText": "SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';",
+    "EventId": {
+      "Id": 20101,
+      "Name": "Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"
+    },
+    "SourceContext": "Microsoft.EntityFrameworkCore.Database.Command"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:26.9048511+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}",
+  "Properties": {
+    "elapsed": "1",
+    "parameters": "",
+    "commandType": "Text",
+    "commandTimeout": 30,
+    "newLine": "\r\n",
+    "commandText": "SELECT \"MigrationId\", \"ProductVersion\"\r\nFROM \"__EFMigrationsHistory\"\r\nORDER BY \"MigrationId\";",
+    "EventId": {
+      "Id": 20101,
+      "Name": "Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"
+    },
+    "SourceContext": "Microsoft.EntityFrameworkCore.Database.Command"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:26.9386679+03:00",
+  "Level": "Information",
+  "MessageTemplate": "No migrations were applied. The database is already up to date.",
+  "Properties": {
+    "EventId": {
+      "Id": 20405,
+      "Name": "Microsoft.EntityFrameworkCore.Migrations.MigrationsNotApplied"
+    },
+    "SourceContext": "Microsoft.EntityFrameworkCore.Migrations"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:27.4795896+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Now listening on: {address}",
+  "Properties": {
+    "address": "https://localhost:7071",
+    "EventId": {
+      "Id": 14,
+      "Name": "ListeningOnAddress"
+    },
+    "SourceContext": "Microsoft.Hosting.Lifetime"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:27.5124055+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Now listening on: {address}",
+  "Properties": {
+    "address": "http://localhost:5098",
+    "EventId": {
+      "Id": 14,
+      "Name": "ListeningOnAddress"
+    },
+    "SourceContext": "Microsoft.Hosting.Lifetime"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:27.6924289+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Application started. Press Ctrl+C to shut down.",
+  "Properties": { "SourceContext": "Microsoft.Hosting.Lifetime" }
+} {
+  "Timestamp": "2026-11-23T21:14:27.7379107+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Hosting environment: {EnvName}",
+  "Properties": {
+    "EnvName": "Development",
+    "SourceContext": "Microsoft.Hosting.Lifetime"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:27.7453033+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Content root path: {ContentRoot}",
+  "Properties": {
+    "ContentRoot": "C:\\Users\\Anna\\code-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform",
+    "SourceContext": "Microsoft.Hosting.Lifetime"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:27.7923181+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request starting {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {ContentType} {ContentLength}",
+  "TraceId": "ed03271a266cef74db1ce8b3403f7ca5",
+  "SpanId": "9b5ea055500e2f2e",
+  "Properties": {
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "ContentType": null,
+    "ContentLength": null,
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/swagger/index.html",
+    "QueryString": "",
+    "EventId": { "Id": 1 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HME8GF4B:00000001",
+    "RequestPath": "/swagger/index.html",
+    "ConnectionId": "0HNQ9HME8GF4B"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:28.3476884+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request finished {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {StatusCode} {ContentLength} {ContentType} {ElapsedMilliseconds}ms",
+  "TraceId": "ed03271a266cef74db1ce8b3403f7ca5",
+  "SpanId": "9b5ea055500e2f2e",
+  "Properties": {
+    "ElapsedMilliseconds": 559.3696,
+    "StatusCode": 200,
+    "ContentType": "text/html;charset=utf-8",
+    "ContentLength": null,
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/swagger/index.html",
+    "QueryString": "",
+    "EventId": { "Id": 2 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HME8GF4B:00000001",
+    "RequestPath": "/swagger/index.html",
+    "ConnectionId": "0HNQ9HME8GF4B"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:28.4078227+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request starting {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {ContentType} {ContentLength}",
+  "TraceId": "16b3d611d2551c1537a7f15ec9a144d2",
+  "SpanId": "f67c5d70b68805b4",
+  "Properties": {
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "ContentType": null,
+    "ContentLength": null,
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/_framework/aspnetcore-browser-refresh.js",
+    "QueryString": "",
+    "EventId": { "Id": 1 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HME8GF4B:00000003",
+    "RequestPath": "/_framework/aspnetcore-browser-refresh.js",
+    "ConnectionId": "0HNQ9HME8GF4B"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:28.4081821+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request starting {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {ContentType} {ContentLength}",
+  "TraceId": "9a7a93a2472d7758686ff8bd1bd732b8",
+  "SpanId": "e65c48d500872a14",
+  "Properties": {
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "ContentType": null,
+    "ContentLength": null,
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/_vs/browserLink",
+    "QueryString": "",
+    "EventId": { "Id": 1 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HME8GF4B:00000005",
+    "RequestPath": "/_vs/browserLink",
+    "ConnectionId": "0HNQ9HME8GF4B"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:28.4614253+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request finished {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {StatusCode} {ContentLength} {ContentType} {ElapsedMilliseconds}ms",
+  "TraceId": "16b3d611d2551c1537a7f15ec9a144d2",
+  "SpanId": "f67c5d70b68805b4",
+  "Properties": {
+    "ElapsedMilliseconds": 53.5285,
+    "StatusCode": 200,
+    "ContentType": "application/javascript; charset=utf-8",
+    "ContentLength": 16523,
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/_framework/aspnetcore-browser-refresh.js",
+    "QueryString": "",
+    "EventId": { "Id": 2 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HME8GF4B:00000003",
+    "RequestPath": "/_framework/aspnetcore-browser-refresh.js",
+    "ConnectionId": "0HNQ9HME8GF4B"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:28.5467497+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request finished {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {StatusCode} {ContentLength} {ContentType} {ElapsedMilliseconds}ms",
+  "TraceId": "9a7a93a2472d7758686ff8bd1bd732b8",
+  "SpanId": "e65c48d500872a14",
+  "Properties": {
+    "ElapsedMilliseconds": 138.5679,
+    "StatusCode": 200,
+    "ContentType": "text/javascript; charset=UTF-8",
+    "ContentLength": null,
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/_vs/browserLink",
+    "QueryString": "",
+    "EventId": { "Id": 2 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HME8GF4B:00000005",
+    "RequestPath": "/_vs/browserLink",
+    "ConnectionId": "0HNQ9HME8GF4B"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:28.9323429+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request starting {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {ContentType} {ContentLength}",
+  "TraceId": "77026d31b0dbaa3bf9d24a710e7ea0b5",
+  "SpanId": "15a10bb575717eb8",
+  "Properties": {
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "ContentType": null,
+    "ContentLength": null,
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/swagger/v1/swagger.json",
+    "QueryString": "",
+    "EventId": { "Id": 1 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HME8GF4B:00000007",
+    "RequestPath": "/swagger/v1/swagger.json",
+    "ConnectionId": "0HNQ9HME8GF4B"
+  }
+} {
+  "Timestamp": "2026-11-23T21:14:29.0352594+03:00",
+  "Level": "Information",
+  "MessageTemplate": "Request finished {Protocol} {Method} {Scheme}://{Host}{PathBase}{Path}{QueryString} - {StatusCode} {ContentLength} {ContentType} {ElapsedMilliseconds}ms",
+  "TraceId": "77026d31b0dbaa3bf9d24a710e7ea0b5",
+  "SpanId": "15a10bb575717eb8",
+  "Properties": {
+    "ElapsedMilliseconds": 102.7086,
+    "StatusCode": 200,
+    "ContentType": "application/json;charset=utf-8",
+    "ContentLength": null,
+    "Protocol": "HTTP/2",
+    "Method": "GET",
+    "Scheme": "https",
+    "Host": "localhost:7071",
+    "PathBase": "",
+    "Path": "/swagger/v1/swagger.json",
+    "QueryString": "",
+    "EventId": { "Id": 2 },
+    "SourceContext": "Microsoft.AspNetCore.Hosting.Diagnostics",
+    "RequestId": "0HNQ9HME8GF4B:00000007",
+    "RequestPath": "/swagger/v1/swagger.json",
+    "ConnectionId": "0HNQ9HME8GF4B"
+  }
+}

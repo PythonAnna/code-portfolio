@@ -1,11 +1,12 @@
-﻿using TestingPlatform.Infrastructure.Exceptions;
+﻿using System;
+using TestingPlatform.Infrastructure.Exceptions;
 
 namespace TestingPlatform.API.Middlewares
 {
     public class ExceptionMiddleware
     {
         private RequestDelegate _next;
-        public ExceptionMiddleware(RequestDelegate next)
+        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
         {
             _next = next;
         }
@@ -18,6 +19,7 @@ namespace TestingPlatform.API.Middlewares
             }
             catch(InvalidOperationException exc)
             {
+                //logger.LogError(exc, $"Exception: {exc.Message}");
                 await HandleExeptionAsync(context, StatusCodes.Status400BadRequest, exc.Message);
             }
             catch (ArgumentException exc)
@@ -30,6 +32,7 @@ namespace TestingPlatform.API.Middlewares
             }
             catch (Exception exc)
             {
+                Console.WriteLine(exc.ToString());
                 await HandleExeptionAsync(context, StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }

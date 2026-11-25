@@ -341,7 +341,7 @@ namespace TestingPlatform.Infrastructure.Repositories
 
         private async Task RefreshPublicationStatuses()
         {
-            var now = DateTimeOffset.UtcNow;
+            var now = DateTime.UtcNow;
             var publishCandidates = await _db.Tests
                 .AsNoTracking()
                 .Where(t => !t.IsPublic && (t.PublishedAt != null || t.Deadline != null))

@@ -1,0 +1,44 @@
+2026-11-23 21:05:54.186 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-23 21:05:54.271 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-23 21:05:54.296 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-11-23 21:05:54.326 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-11-23 21:05:55.120 +03:00 [INF] Now listening on: https://localhost:7071
+2026-11-23 21:05:55.142 +03:00 [INF] Now listening on: http://localhost:5098
+2026-11-23 21:05:55.434 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-23 21:05:55.592 +03:00 [INF] Hosting environment: Development
+2026-11-23 21:05:55.726 +03:00 [INF] Content root path: C:\Users\Anna\code-portfolio\course-2\projects\TestingPlatform\TestingPlatform
+2026-11-23 21:05:56.236 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-11-23 21:05:56.706 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 472.4214ms
+2026-11-23 21:05:56.850 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-11-23 21:05:56.851 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-11-23 21:05:57.563 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 713.4993ms
+2026-11-23 21:05:57.636 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 784.934ms
+2026-11-23 21:05:59.768 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-11-23 21:05:59.916 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 147.0916ms
+2026-11-23 21:07:02.442 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-23 21:07:02.526 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-11-23 21:07:02.558 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-11-23 21:07:02.618 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-11-23 21:07:03.336 +03:00 [INF] Now listening on: https://localhost:7071
+2026-11-23 21:07:03.338 +03:00 [INF] Now listening on: http://localhost:5098
+2026-11-23 21:07:03.626 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-23 21:07:03.947 +03:00 [INF] Hosting environment: Development
+2026-11-23 21:07:03.975 +03:00 [INF] Content root path: C:\Users\Anna\code-portfolio\course-2\projects\TestingPlatform\TestingPlatform
+2026-11-23 21:07:04.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/index.html - null null
+2026-11-23 21:07:04.855 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/index.html - 200 null text/html;charset=utf-8 470.3988ms
+2026-11-23 21:07:04.936 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_vs/browserLink - null null
+2026-11-23 21:07:04.940 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - null null
+2026-11-23 21:07:04.980 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 43.7277ms
+2026-11-23 21:07:05.104 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/_vs/browserLink - 200 null text/javascript; charset=UTF-8 168.1867ms
+2026-11-23 21:07:05.353 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - null null
+2026-11-23 21:07:05.469 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 116.6442ms

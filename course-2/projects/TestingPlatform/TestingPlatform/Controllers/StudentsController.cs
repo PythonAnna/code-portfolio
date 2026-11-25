@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TestingPlatform.Application.Interfaces;
 using AutoMapper;
-using TestingPlatform.API.Responses;
 using TestingPlatform.API.Requests.Student;
 using TestingPlatform.Application.Dtos;
 using TestingPlatform.Domain.Enum;
+using TestingPlatform.API.Responses.Student;
 
 
 namespace TestingPlatform.Controllers

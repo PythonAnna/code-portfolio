@@ -3,8 +3,8 @@
     public class Attempt
     {
         public int Id { get; set; }
-        public DateTimeOffset StartedAt { get; set; }
-        public DateTimeOffset? SubmittedAt { get; set; }
+        public DateTime StartedAt { get; set; }
+        public DateTime? SubmittedAt { get; set; }
         public int? Score { get; set; }
         public int TestId { get; set; }
         public int StudentId { get; set; }
